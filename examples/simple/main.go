@@ -1,0 +1,221 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"time"
+
+	telemetry_client "github.com/vwhitteron/gt-telemetry"
+)
+
+func main() {
+	client, err := telemetry_client.NewGTClient("255.255.255.255", "info")
+	if err != nil {
+		log.Fatalf("Failed to create GT client: %s", err.Error())
+	}
+
+	go client.Run()
+	for {
+		suggestedGear := client.Telemetry.SuggestedGear()
+		suggestedGearStr := fmt.Sprintf("[%d]", suggestedGear)
+		if suggestedGear == 15 {
+			suggestedGearStr = ""
+		}
+
+		hasTurbo := client.Telemetry.Flags().HasTurbo
+		boostStr := ""
+		if hasTurbo {
+			boostStr = fmt.Sprintf("Boost: %1.02f Bar", client.Telemetry.TurboBoostBar())
+		}
+
+		fmt.Print("\033[H\033[2J")
+		fmt.Printf("Sequence ID:  %d\nTime of day:  %+v\n",
+			client.Telemetry.SequenceID(),
+			client.Telemetry.TimeOfDay(),
+		)
+		fmt.Printf("Race          Lap: %d of %d  Last lap: %+v  Best lap: %+v  Start position: %d  Race entrants: %d\n",
+			client.Telemetry.CurrentLap(),
+			client.Telemetry.RaceLaps(),
+			client.Telemetry.LastLaptime(),
+			client.Telemetry.BestLaptime(),
+			client.Telemetry.StartingPosition(),
+			client.Telemetry.RaceEntrants(),
+		)
+
+		fmt.Println()
+		fmt.Printf("Vehicle       ID: %d  Turbocharged: %t\n",
+			client.Telemetry.VehicleID(),
+			hasTurbo,
+		)
+
+		fmt.Println()
+		fmt.Printf("Inputs        Throttle: %3.0f%%  Brake: %3.0f%%  Gear: %s %3s\n",
+			client.Telemetry.ThrottlePercent(),
+			client.Telemetry.BrakePercent(),
+			client.Telemetry.CurrentGearString(),
+			suggestedGearStr,
+		)
+		fmt.Printf("Outputs       Engine Speed: %s rpm  Ground Speed: %0.0f kph\n",
+			renderFlag(
+				client.Telemetry.EngineRPMLight().Active,
+				fmt.Sprintf("%0.0f", client.Telemetry.EngineRPM()),
+				"yellow",
+				"default",
+			),
+			client.Telemetry.GroundSpeedKPH(),
+		)
+		fmt.Printf("Fluids        Fuel level: %3.0f%%  Fuel capacity: %3.0f%%  Water temp: %3.0fc  Oil temp: %3.0fc  Oil pressure: %3.02f  %s\n",
+			client.Telemetry.FuelLevelPercent(),
+			client.Telemetry.FuelCapacityPercent(),
+			client.Telemetry.WaterTemperatureCelsius(),
+			client.Telemetry.OilTemperatureCelsius(),
+			client.Telemetry.OilPressureKPA(),
+			boostStr,
+		)
+		fmt.Printf("Clutch        Position: %0.0f%%  Engagement: %0.0f%%  Output: %5.0f RPM\n",
+			client.Telemetry.ClutchActuationPercent(),
+			client.Telemetry.ClutchEngagementPercent(),
+			client.Telemetry.ClutchOutputRPM(),
+		)
+		fmt.Printf("Transmission  Gears: %2d                  Ratios: 1[%0.03f]  3[%0.03f]  5[%0.03f]  7[%0.03f]\n",
+			client.Telemetry.Transmission().Gears,
+			client.Telemetry.Transmission().GearRatios[0],
+			client.Telemetry.Transmission().GearRatios[2],
+			client.Telemetry.Transmission().GearRatios[4],
+			client.Telemetry.Transmission().GearRatios[6],
+		)
+		fmt.Printf("              vMax: %3d kph @ %5d rpm          2[%0.03f]  4[%0.03f]  6[%0.03f]  8[%0.03f] Diff[%0.03f]\n",
+			client.Telemetry.CalculatedVmax().Speed,
+			client.Telemetry.CalculatedVmax().RPM,
+			client.Telemetry.Transmission().GearRatios[1],
+			client.Telemetry.Transmission().GearRatios[3],
+			client.Telemetry.Transmission().GearRatios[5],
+			client.Telemetry.Transmission().GearRatios[7],
+			client.Telemetry.DifferentialRatio(),
+		)
+
+		fmt.Println()
+		fmt.Println("                    [  FL  ]  [  FR  ]  [  RL  ]  [  RR  ]")
+		fmt.Printf("Suspension height:  [%5.0f ]  [%5.0f ]  [%5.0f ]  [%5.0f ] mm  Ride height: %0.02f mm\n",
+			client.Telemetry.SuspensionHeightMillimeters().FrontLeft,
+			client.Telemetry.SuspensionHeightMillimeters().FrontRight,
+			client.Telemetry.SuspensionHeightMillimeters().RearLeft,
+			client.Telemetry.SuspensionHeightMillimeters().RearRight,
+			client.Telemetry.RideHeightMillimeters(),
+		)
+		fmt.Printf("Tyre temperature:   [%5.0f ]  [%5.0f ]  [%5.0f ]  [%5.0f ] c\n",
+			client.Telemetry.TyreTemperatureCelsius().FrontLeft,
+			client.Telemetry.TyreTemperatureCelsius().FrontRight,
+			client.Telemetry.TyreTemperatureCelsius().RearLeft,
+			client.Telemetry.TyreTemperatureCelsius().RearRight,
+		)
+		fmt.Printf("Tyre diameter:      [%5.0f ]  [%5.0f ]  [%5.0f ]  [%5.0f ] mm\n",
+			client.Telemetry.TyreDiameterMillimeters().FrontLeft,
+			client.Telemetry.TyreDiameterMillimeters().FrontRight,
+			client.Telemetry.TyreDiameterMillimeters().RearLeft,
+			client.Telemetry.TyreDiameterMillimeters().RearRight,
+		)
+		fmt.Printf("Wheel RPM:          [%5.0f ]  [%5.0f ]  [%5.0f ]  [%5.0f ] rpm\n",
+			client.Telemetry.WheelSpeedRPM().FrontLeft,
+			client.Telemetry.WheelSpeedRPM().FrontRight,
+			client.Telemetry.WheelSpeedRPM().RearLeft,
+			client.Telemetry.WheelSpeedRPM().RearRight,
+		)
+		fmt.Printf("Wheel speed:        [%5.0f ]  [%5.0f ]  [%5.0f ]  [%5.0f ] kph\n",
+			client.Telemetry.WheelSpeedKPH().FrontLeft,
+			client.Telemetry.WheelSpeedKPH().FrontRight,
+			client.Telemetry.WheelSpeedKPH().RearLeft,
+			client.Telemetry.WheelSpeedKPH().RearRight,
+		)
+		fmt.Printf("Tyre slip ratio:    [%5s]  [%5s]  [%5s]  [%5s] %%\n",
+			fmt.Sprintf("%+f", (client.Telemetry.TyreSlipRatio().FrontLeft-1)*100)[0:6],
+			fmt.Sprintf("%+f", (client.Telemetry.TyreSlipRatio().FrontRight-1)*100)[0:6],
+			fmt.Sprintf("%+f", (client.Telemetry.TyreSlipRatio().RearLeft-1)*100)[0:6],
+			fmt.Sprintf("%+f", (client.Telemetry.TyreSlipRatio().RearRight-1)*100)[0:6],
+		)
+
+		fmt.Println()
+		fmt.Println("                    [    X    ]  [    Y    ]  [    Z    ]")
+		fmt.Printf("Position on map:    [%9s]  [%9s]  [%9s] m  Heading: %d\n",
+			fmt.Sprintf("%+f", client.Telemetry.PositionalMapCoordinates().X)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.PositionalMapCoordinates().Y)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.PositionalMapCoordinates().Z)[0:9],
+			int(client.Telemetry.Heading()*360),
+		)
+		fmt.Printf("Velocity:           [%9s]  [%9s]  [%9s] m/sec\n",
+			fmt.Sprintf("%+f", client.Telemetry.VelocityVector().X)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.VelocityVector().Y)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.VelocityVector().Z)[0:9],
+		)
+		fmt.Printf("Angular velocity:   [%9s]  [%9s]  [%9s] rad/s\n",
+			fmt.Sprintf("%+f", client.Telemetry.AngularVelocityVector().X)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.AngularVelocityVector().Y)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.AngularVelocityVector().Z)[0:9],
+		)
+		fmt.Printf("Rotation:           [%9s]  [%9s]  [%9s]\n",
+			fmt.Sprintf("%+f", client.Telemetry.RotationVector().Pitch)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.RotationVector().Yaw)[0:9],
+			fmt.Sprintf("%+f", client.Telemetry.RotationVector().Roll)[0:9],
+		)
+		fmt.Println("                    [  Pitch  ]  [   Yaw   ]  [  Roll   ]")
+
+		fmt.Println()
+		fmt.Printf("Flags         %s    %s        %s\n",
+			renderFlag(client.Telemetry.Flags().RevLimiterAlert, "RevLimit", "red", "grey"),
+			renderFlag(client.Telemetry.Flags().TCSActive, "TCS", "red", "grey"),
+			renderFlag(client.Telemetry.Flags().ASMActive, "ASM", "red", "grey"),
+		)
+		fmt.Printf("              %s      %s   %s\n",
+			renderFlag(client.Telemetry.Flags().HeadlightsActive, "Lights", "green", "grey"),
+			renderFlag(client.Telemetry.Flags().LowBeamActive, "Low beam", "yellow", "grey"),
+			renderFlag(client.Telemetry.Flags().HighBeamActive, "High beam", "blue", "grey"),
+		)
+		fmt.Printf("              %s     %s\n",
+			renderFlag(client.Telemetry.Flags().InGear, "In gear", "green", "red"),
+			renderFlag(client.Telemetry.Flags().HandbrakeActive, "Handbrake", "red", "grey"),
+		)
+		fmt.Printf("              %s        %s    %s\n",
+			renderFlag(client.Telemetry.Flags().Live, "Live", "green", "grey"),
+			renderFlag(client.Telemetry.Flags().Loading, "Loading", "yellow", "grey"),
+			renderFlag(client.Telemetry.Flags().GamePaused, "Paused", "red", "grey"),
+		)
+		fmt.Printf("Other flags   %s  %s  %s  %s\n",
+			renderFlag(client.Telemetry.Flags().Flag13, "13", "red", "grey"),
+			renderFlag(client.Telemetry.Flags().Flag14, "14", "red", "grey"),
+			renderFlag(client.Telemetry.Flags().Flag15, "15", "red", "grey"),
+			renderFlag(client.Telemetry.Flags().Flag16, "16", "red", "grey"),
+		)
+
+		time.Sleep(10 * time.Millisecond)
+	}
+}
+
+func renderFlag(value bool, output string, tColour string, fColour string) string {
+	colour := fColour
+	if value {
+		colour = tColour
+	}
+
+	switch colour {
+	case "red":
+		return fmt.Sprintf("\033[31m%s\033[0m", output)
+	case "green":
+		return fmt.Sprintf("\033[32m%s\033[0m", output)
+	case "yellow":
+		return fmt.Sprintf("\033[33m%s\033[0m", output)
+	case "blue":
+		return fmt.Sprintf("\033[34m%s\033[0m", output)
+	case "magenta":
+		return fmt.Sprintf("\033[35m%s\033[0m", output)
+	case "cyan":
+		return fmt.Sprintf("\033[36m%s\033[0m", output)
+	case "white":
+		return fmt.Sprintf("\033[37m%s\033[0m", output)
+	case "grey":
+		return fmt.Sprintf("\033[90m%s\033[0m", output)
+	case "black":
+		return fmt.Sprintf("\033[30m%s\033[0m", output)
+	default:
+		return output
+	}
+}

@@ -2,7 +2,8 @@ name: Run Tests
 on: [push]
 
 jobs:
-  lint:
+  qualitycheck:
+    name: Quality Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -12,11 +13,11 @@ jobs:
         with:
           go-version-file: "go.mod"
           check-latest: true
-      - name: Setup golangci-lint
+      - name: Lint code
         uses: golangci/golangci-lint-action@v4
         with:
           version: "v1.56.2"
           args: --verbose
-      - name: Quality Check
+      - name: Audit code
         run: |
           make audit

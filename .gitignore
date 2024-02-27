@@ -1,2 +1,8 @@
+# MacOS hidden files
 .DS_Store
+
+# Build files
 examples/bin/
+
+# Coverage reports
+*.out

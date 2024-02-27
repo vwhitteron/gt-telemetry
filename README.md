@@ -27,11 +27,16 @@ import telemetry_client "github.com/vwhitteron/gt-telemetry"
 Construct a new GT client and start reading the telemetry stream.
 
 ```go
-gt, _ := telemetry_client.NewGTClient("255.255.255.255", "info")
+config := telemetry_client.Config{
+    IPAddr: "255.255.255.255",
+    LogLevel: "info",
+    StatsEnabled: false,
+}
+gt, _ := telemetry_client.NewGTClient(config)
 go gt.Run()
 ```
 
-_If the PlayStation is on the same network segment then you will probably find that the broadcast address `255.255.255.255` will be sufficient to star reading data. If it does not work then enter the IP address of the PlayStation device instead._
+_If the PlayStation is on the same network segment then you will probably find that the default broadcast address `255.255.255.255` will be sufficient to start reading data. If it does not work then enter the IP address of the PlayStation device instead._
 
 
 

@@ -9,7 +9,9 @@ import (
 )
 
 func main() {
-	clientConfig := telemetry_client.Config{}
+	clientConfig := telemetry_client.Config{
+		StatsEnabled: true,
+	}
 
 	client, err := telemetry_client.NewGTClient(clientConfig)
 	if err != nil {
@@ -203,17 +205,23 @@ func main() {
 			renderFlag(client.Telemetry.Flags().Flag15, "15", "red", "grey"),
 			renderFlag(client.Telemetry.Flags().Flag16, "16", "red", "grey"),
 		)
-		fmt.Println()
-		fmt.Printf("Packets       Total: %9d    Dropped: %9d    Invalid: %9d\n",
-			client.Statistics.PacketsTotal,
-			client.Statistics.PacketsDropped,
-			client.Statistics.PacketsInvalid,
-		)
-		fmt.Printf("Packet rate   Current: %7d/s  Average: %8d/s   Maximum: %9d/s\n",
-			client.Statistics.PacketRateCurrent,
-			client.Statistics.PacketRateAvg,
-			client.Statistics.PacketRateMax,
-		)
+		if clientConfig.StatsEnabled {
+			fmt.Println()
+			fmt.Printf("Packets       Total: %9d    Dropped: %9d     Invalid: %9d\n",
+				client.Statistics.PacketsTotal,
+				client.Statistics.PacketsDropped,
+				client.Statistics.PacketsInvalid,
+			)
+			fmt.Printf("Packet rate   Current: %7d/s  Average: %9d/s   Maximum: %9d/s\n",
+				client.Statistics.PacketRateCurrent,
+				client.Statistics.PacketRateAvg,
+				client.Statistics.PacketRateMax,
+			)
+			fmt.Printf("Decode time                       Average: %9dus   Maximum: %9dus\n",
+				client.Statistics.DecodeTimeAvg.Microseconds(),
+				client.Statistics.DecodeTimeMax.Microseconds(),
+			)
+		}
 
 		time.Sleep(64 * time.Millisecond)
 	}

@@ -18,15 +18,18 @@ const cipherKey string = "Simulator Interface Packet GT7 ver 0.0"
 
 type statistics struct {
 	enabled           bool
+	decodeTimeLast    time.Duration
+	packetRateLast    time.Time
+	packetIDLast      uint32
+	DecodeTimeAvg     time.Duration
+	DecodeTimeMax     time.Duration
 	Heartbeat         bool
+	PacketRateAvg     int
 	PacketRateCurrent int
 	PacketRateMax     int
-	PacketRateAvg     int
-	packetRateLast    time.Time
 	PacketsDropped    int
 	PacketsInvalid    int
 	PacketsTotal      int
-	packetLastID      uint32
 }
 
 type Config struct {
@@ -66,15 +69,18 @@ func NewGTClient(config Config) (*GTClient, error) {
 		Telemetry:   NewTransformer(),
 		Statistics: &statistics{
 			enabled:           config.StatsEnabled,
+			decodeTimeLast:    time.Duration(0),
+			packetRateLast:    time.Now(),
+			DecodeTimeAvg:     time.Duration(0),
+			DecodeTimeMax:     time.Duration(0),
 			Heartbeat:         false,
 			PacketRateCurrent: 0,
 			PacketRateMax:     0,
 			PacketRateAvg:     0,
-			packetRateLast:    time.Now(),
 			PacketsTotal:      0,
 			PacketsDropped:    0,
 			PacketsInvalid:    0,
-			packetLastID:      0,
+			packetIDLast:      0,
 		},
 	}, nil
 }
@@ -104,7 +110,6 @@ func (c *GTClient) Run() {
 
 	for {
 		buffer := make([]byte, 4096)
-		c.logger.Debug("Reading telemetry")
 		bufLen, _, err := conn.ReadFromUDP(buffer)
 		if err != nil {
 			c.logger.Debug(fmt.Sprintf("Failed to receive telemetry: %s", err.Error()))
@@ -115,6 +120,8 @@ func (c *GTClient) Run() {
 			c.logger.Debug("No data received")
 			continue
 		}
+
+		decodeStart := time.Now()
 
 		telemetryData := salsa20Decode(buffer[:bufLen])
 
@@ -129,6 +136,7 @@ func (c *GTClient) Run() {
 
 		c.Telemetry.RawTelemetry = *rawTelemetry
 
+		c.Statistics.decodeTimeLast = time.Since(decodeStart)
 		c.collectStats()
 	}
 }
@@ -140,13 +148,18 @@ func (c *GTClient) collectStats() {
 
 	c.Statistics.PacketsTotal++
 
-	if c.Statistics.packetLastID != c.Telemetry.SequenceID() {
-		if c.Statistics.packetLastID == 0 {
-			c.Statistics.packetLastID = c.Telemetry.SequenceID()
+	if c.Statistics.packetIDLast != c.Telemetry.SequenceID() {
+		if c.Statistics.packetIDLast == 0 {
+			c.Statistics.packetIDLast = c.Telemetry.SequenceID()
 			return
 		}
 
-		delta := int(c.Telemetry.SequenceID() - c.Statistics.packetLastID)
+		c.Statistics.DecodeTimeAvg = (c.Statistics.DecodeTimeAvg + c.Statistics.decodeTimeLast) / 2
+		if c.Statistics.decodeTimeLast > c.Statistics.DecodeTimeMax {
+			c.Statistics.DecodeTimeMax = c.Statistics.decodeTimeLast
+		}
+
+		delta := int(c.Telemetry.SequenceID() - c.Statistics.packetIDLast)
 		if delta > 1 {
 			c.logger.Warn(fmt.Sprintf("Dropped packets detected: %d", delta-1))
 			c.Statistics.PacketsDropped += int(delta - 1)
@@ -154,7 +167,7 @@ func (c *GTClient) collectStats() {
 			c.logger.Warn("Delayed packet deteted")
 		}
 
-		c.Statistics.packetLastID = c.Telemetry.SequenceID()
+		c.Statistics.packetIDLast = c.Telemetry.SequenceID()
 
 		if c.Telemetry.SequenceID()%10 == 0 {
 			rate := time.Since(c.Statistics.packetRateLast)

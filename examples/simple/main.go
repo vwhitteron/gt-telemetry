@@ -22,13 +22,13 @@ func main() {
 
 	fmt.Println("Waiting for data...    Press Ctrl+C to exit")
 
-	sequenceId := uint32(0)
+	sequenceID := uint32(0)
 	for {
-		if sequenceId == client.Telemetry.SequenceID() {
+		if sequenceID == client.Telemetry.SequenceID() {
 			time.Sleep(8 * time.Millisecond)
 			continue
 		}
-		sequenceId = client.Telemetry.SequenceID()
+		sequenceID = client.Telemetry.SequenceID()
 
 		suggestedGear := client.Telemetry.SuggestedGear()
 		suggestedGearStr := fmt.Sprintf("[%d]", suggestedGear)

@@ -1,4 +1,4 @@
-package telemetry_client
+package telemetry
 
 import (
 	"bytes"

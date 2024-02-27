@@ -9,7 +9,9 @@ import (
 )
 
 func main() {
-	client, err := telemetry_client.NewGTClient("255.255.255.255", "info")
+	clientConfig := telemetry_client.Config{}
+
+	client, err := telemetry_client.NewGTClient(clientConfig)
 	if err != nil {
 		log.Fatalf("Failed to create GT client: %s", err.Error())
 	}

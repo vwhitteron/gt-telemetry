@@ -15,6 +15,10 @@ import (
 )
 
 const cipherKey string = "Simulator Interface Packet GT7 ver 0.0"
+type Config struct {
+	IPAddr       string
+	LogLevel     string
+}
 
 type GTClient struct {
 	logger      *utils.Logger
@@ -24,15 +28,23 @@ type GTClient struct {
 	Telemetry   *transformer
 }
 
-func NewGTClient(ipAddr string, logLevel string) (*GTClient, error) {
-	logger, err := utils.NewLogger(logLevel)
+func NewGTClient(config Config) (*GTClient, error) {
+	if config.LogLevel == "" {
+		config.LogLevel = "info"
+	}
+	logger, err := utils.NewLogger(config.LogLevel)
 	if err != nil {
 		return nil, err
 	}
 
+	if config.IPAddr == "" {
+		config.IPAddr = "255.255.255.255"
+
+	}
+
 	return &GTClient{
 		logger:      logger,
-		ipAddr:      ipAddr,
+		ipAddr:      config.IPAddr,
 		sendPort:    33739,
 		receivePort: 33740,
 		Telemetry:   NewTransformer(),

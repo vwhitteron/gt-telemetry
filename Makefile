@@ -3,6 +3,7 @@
 MAIN_PACKAGE_PATH := ./examples/simple
 BINARY_NAME := gt-telemetry
 
+
 # ==================================================================================== #
 # HELPERS
 # ==================================================================================== #
@@ -41,6 +42,11 @@ audit:
 	go run golang.org/x/vuln/cmd/govulncheck@latest ./...
 	go test -race -buildvcs -vet=off ./...
 
+## lint: run linters
+.PHONY: lint
+lint:
+	golangci-lint run
+
 
 # ==================================================================================== #
 # DEVELOPMENT
@@ -57,15 +63,34 @@ test/cover:
 	go test -v -race -buildvcs -coverprofile=/tmp/coverage.out ./...
 	go tool cover -html=/tmp/coverage.out
 
-## kaitai: compile the GT telemetry kaitai struct
-.PHONY: kaitai
-kaitai-struct:
+## kaitai: compile the GT telemetry package from the Kaitai Struct
+.PHONY: build/kaitai
+build/kaitai:
+ifeq (, $(shell which kaitai-struct-compilerx))
+	$(error "kaitai-struct-compiler command not found, see https://kaitai.io/#download for installation instructions.")
+endif
 	@kaitai-struct-compiler --target go --go-package gttelemetry --outdir internal internal/kaitai/gran_turismo_telemetry.ksy
 
 ## build: build the application
 .PHONY: build
-build: kaitai
+build:
 	@go build -o examples/bin/${BINARY_NAME} ${MAIN_PACKAGE_PATH}
+
+.PHONY: build-darwin
+build-darwin:
+	@GOOS=darwin GOARCH=arm64 go build -o examples/bin/${BINARY_NAME}-darwin-arm64 ${MAIN_PACKAGE_PATH}
+
+.PHONY: build-linux
+build-linux:
+	@GOOS=linux GOARCH=amd64 go build -o examples/bin/${BINARY_NAME}-linux-amd64 ${MAIN_PACKAGE_PATH}
+
+.PHONY: build-rpi
+build-rpi:
+	@GOOS=linux GOARCH=arm64 go build -o examples/bin/${BINARY_NAME}-rpi-arm64 ${MAIN_PACKAGE_PATH}
+
+.PHONY: build-windows
+build-windows:
+	@GOOS=windows GOARCH=amd64 go build -o examples/bin/${BINARY_NAME}-amd64.exe ${MAIN_PACKAGE_PATH}
 
 ## run: run the  application
 .PHONY: run
@@ -75,11 +100,7 @@ run: build
 ## run/live: run the application with reloading on file changes
 .PHONY: run/live
 run/live:
-	@go run ${MAIN_PACKAGE_PATH}/main.go \
-		--build.cmd "make build" --build.bin "/tmp/bin/${BINARY_NAME}" --build.delay "100" \
-		--build.exclude_dir "" \
-		--build.include_ext "go, tpl, tmpl, html, css, scss, js, ts, sql, jpeg, jpg, gif, png, bmp, svg, webp, ico" \
-		--misc.clean_on_exit "true"
+	@go run ${MAIN_PACKAGE_PATH}/main.go
 
 ## clean: clean up project and return to a pristine state
 .PHONY: clean

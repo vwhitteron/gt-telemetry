@@ -1,5 +1,9 @@
 # GT Telemetry #
 
+[![Build Status](https://github.com/vwhitteron/gt-telemetry/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/vwhitteron/gt-telemetry/actions?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/vwhitteron/gt-telemetry/branch/main/graph/badge.svg)](https://codecov.io/gh/vwhitteron/gt-telemetry)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vwhitteron/gt-telemetry)](https://goreportcard.com/report/github.com/vwhitteron/gt-telemetry)
+
 GT Telemetry is a module for reading Gran Turismo race telemetry streams in Go.
 
 ## Features

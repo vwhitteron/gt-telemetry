@@ -17,7 +17,17 @@ func main() {
 	}
 
 	go client.Run()
+
+	fmt.Println("Waiting for data...    Press Ctrl+C to exit")
+
+	sequenceId := uint32(0)
 	for {
+		if sequenceId == client.Telemetry.SequenceID() {
+			time.Sleep(8 * time.Millisecond)
+			continue
+		}
+		sequenceId = client.Telemetry.SequenceID()
+
 		suggestedGear := client.Telemetry.SuggestedGear()
 		suggestedGearStr := fmt.Sprintf("[%d]", suggestedGear)
 		if suggestedGear == 15 {
@@ -31,8 +41,14 @@ func main() {
 		}
 
 		fmt.Print("\033[H\033[2J")
-		fmt.Printf("Sequence ID:  %d\nTime of day:  %+v\n",
+		fmt.Printf("Sequence ID:  %d  %s\nTime of day:  %+v\n",
 			client.Telemetry.SequenceID(),
+			renderFlag(
+				client.Statistics.Heartbeat,
+				"Heartbeat",
+				"yellow",
+				"invisible",
+			),
 			client.Telemetry.TimeOfDay(),
 		)
 		fmt.Printf("Race          Lap: %d of %d  Last lap: %+v  Best lap: %+v  Start position: %d  Race entrants: %d\n",
@@ -187,18 +203,31 @@ func main() {
 			renderFlag(client.Telemetry.Flags().Flag15, "15", "red", "grey"),
 			renderFlag(client.Telemetry.Flags().Flag16, "16", "red", "grey"),
 		)
+		fmt.Println()
+		fmt.Printf("Packets       Total: %9d    Dropped: %9d    Invalid: %9d\n",
+			client.Statistics.PacketsTotal,
+			client.Statistics.PacketsDropped,
+			client.Statistics.PacketsInvalid,
+		)
+		fmt.Printf("Packet rate   Current: %7d/s  Average: %8d/s   Maximum: %9d/s\n",
+			client.Statistics.PacketRateCurrent,
+			client.Statistics.PacketRateAvg,
+			client.Statistics.PacketRateMax,
+		)
 
-		time.Sleep(10 * time.Millisecond)
+		time.Sleep(64 * time.Millisecond)
 	}
 }
 
-func renderFlag(value bool, output string, tColour string, fColour string) string {
+func renderFlag(value bool, output string, trueColour string, fColour string) string {
 	colour := fColour
 	if value {
-		colour = tColour
+		colour = trueColour
 	}
 
 	switch colour {
+	case "black":
+		return fmt.Sprintf("\033[30m%s\033[0m", output)
 	case "red":
 		return fmt.Sprintf("\033[31m%s\033[0m", output)
 	case "green":
@@ -215,8 +244,8 @@ func renderFlag(value bool, output string, tColour string, fColour string) strin
 		return fmt.Sprintf("\033[37m%s\033[0m", output)
 	case "grey":
 		return fmt.Sprintf("\033[90m%s\033[0m", output)
-	case "black":
-		return fmt.Sprintf("\033[30m%s\033[0m", output)
+	case "invisible":
+		return ""
 	default:
 		return output
 	}

@@ -15,9 +15,24 @@ import (
 )
 
 const cipherKey string = "Simulator Interface Packet GT7 ver 0.0"
+
+type statistics struct {
+	enabled           bool
+	Heartbeat         bool
+	PacketRateCurrent int
+	PacketRateMax     int
+	PacketRateAvg     int
+	packetRateLast    time.Time
+	PacketsDropped    int
+	PacketsInvalid    int
+	PacketsTotal      int
+	packetLastID      uint32
+}
+
 type Config struct {
 	IPAddr       string
 	LogLevel     string
+	StatsEnabled bool
 }
 
 type GTClient struct {
@@ -26,6 +41,7 @@ type GTClient struct {
 	sendPort    int
 	receivePort int
 	Telemetry   *transformer
+	Statistics  *statistics
 }
 
 func NewGTClient(config Config) (*GTClient, error) {
@@ -48,6 +64,18 @@ func NewGTClient(config Config) (*GTClient, error) {
 		sendPort:    33739,
 		receivePort: 33740,
 		Telemetry:   NewTransformer(),
+		Statistics: &statistics{
+			enabled:           config.StatsEnabled,
+			Heartbeat:         false,
+			PacketRateCurrent: 0,
+			PacketRateMax:     0,
+			PacketRateAvg:     0,
+			packetRateLast:    time.Now(),
+			PacketsTotal:      0,
+			PacketsDropped:    0,
+			PacketsInvalid:    0,
+			packetLastID:      0,
+		},
 	}, nil
 }
 
@@ -63,7 +91,14 @@ func (c *GTClient) Run() {
 	}
 	defer conn.Close()
 
-	c.SendHeartbeat(conn)
+	ticker := time.NewTicker(10 * time.Second)
+	go func() {
+		c.SendHeartbeat(conn)
+
+		for range ticker.C {
+			c.SendHeartbeat(conn)
+		}
+	}()
 
 	rawTelemetry := gttelemetry.NewGranTurismoTelemetry()
 
@@ -73,7 +108,6 @@ func (c *GTClient) Run() {
 		bufLen, _, err := conn.ReadFromUDP(buffer)
 		if err != nil {
 			c.logger.Debug(fmt.Sprintf("Failed to receive telemetry: %s", err.Error()))
-			c.SendHeartbeat(conn)
 			continue
 		}
 
@@ -90,14 +124,58 @@ func (c *GTClient) Run() {
 		err = rawTelemetry.Read(stream, nil, nil)
 		if err != nil {
 			c.logger.Error(fmt.Sprintf("Failed to parse telemetry: %s", err.Error()))
+			c.Statistics.PacketsInvalid++
 		}
 
 		c.Telemetry.RawTelemetry = *rawTelemetry
+
+		c.collectStats()
 	}
+}
+
+func (c *GTClient) collectStats() {
+	if !c.Statistics.enabled {
+		return
+	}
+
+	c.Statistics.PacketsTotal++
+
+	if c.Statistics.packetLastID != c.Telemetry.SequenceID() {
+		if c.Statistics.packetLastID == 0 {
+			c.Statistics.packetLastID = c.Telemetry.SequenceID()
+			return
+		}
+
+		delta := int(c.Telemetry.SequenceID() - c.Statistics.packetLastID)
+		if delta > 1 {
+			c.logger.Warn(fmt.Sprintf("Dropped packets detected: %d", delta-1))
+			c.Statistics.PacketsDropped += int(delta - 1)
+		} else if delta < 0 {
+			c.logger.Warn("Delayed packet deteted")
+		}
+
+		c.Statistics.packetLastID = c.Telemetry.SequenceID()
+
+		if c.Telemetry.SequenceID()%10 == 0 {
+			rate := time.Since(c.Statistics.packetRateLast)
+			c.Statistics.PacketRateCurrent = int(10 / rate.Seconds())
+			c.Statistics.packetRateLast = time.Now()
+			c.Statistics.PacketRateAvg = (c.Statistics.PacketRateAvg + c.Statistics.PacketRateCurrent) / 2
+			if c.Statistics.PacketRateCurrent > c.Statistics.PacketRateMax {
+				c.Statistics.PacketRateMax = c.Statistics.PacketRateCurrent
+			}
+		}
+	}
+
 }
 
 func (c *GTClient) SendHeartbeat(conn *net.UDPConn) {
 	c.logger.Debug("Sending heartbeat")
+	c.Statistics.Heartbeat = true
+	defer func() {
+		time.Sleep(250 * time.Millisecond)
+		c.Statistics.Heartbeat = false
+	}()
 
 	_, err := conn.WriteToUDP([]byte("A"), &net.UDPAddr{
 		IP:   net.ParseIP(c.ipAddr),

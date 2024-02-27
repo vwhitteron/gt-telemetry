@@ -21,3 +21,25 @@ jobs:
       - name: Audit code
         run: |
           make audit
+
+  test:
+    name: Test
+    needs: qualitycheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: "go.mod"
+          check-latest: true
+      - name: Run tests
+        run: make test
+      - name: Generate coverage report
+        run: make test/cover
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: vwhitteron/gt-telemetry

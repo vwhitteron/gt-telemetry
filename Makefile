@@ -60,8 +60,12 @@ test:
 ## test/cover: run all tests and display coverage
 .PHONY: test/cover
 test/cover:
-	go test -v -race -buildvcs -coverprofile=/tmp/coverage.out ./...
-	go tool cover -html=/tmp/coverage.out
+	go test -v -race -buildvcs -coverprofile=coverage.out ./...
+
+## test/cover/show: run all tests and display coverage in a browser
+.PHONY: test/cover/show
+test/cover/show: test/cover
+	go tool cover -html=coverage.out
 
 ## kaitai: compile the GT telemetry package from the Kaitai Struct
 .PHONY: build/kaitai
@@ -107,3 +111,4 @@ run/live:
 clean:
 	@go clean
 	@rm -rf examples/bin
+	@rm -f coverage.out

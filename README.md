@@ -10,8 +10,22 @@ GT Telemetry is a module for reading Gran Turismo race telemetry streams in Go.
 
 * Support for all fields contained within the telemetry data packet.
 * Access data in both metric and imperial units.
-* An additional field for the differential gear ratio is also computed. Note that the value will not be accurate for FWD vehicles if the tyre rolling diameter differs between the front and rear.
+* An additional field for the differential gear ratio is computed based on the rolling wheel diameter of the driven wheels.
+* A vehicle inventory database for providing the follwing information on a given vehicle ID:
+  * Manufacturer
+  * Model
+  * Year
+  * Drivetrain
+  * Aspiration
+  * Type (racing or street)
+  * Racing category
+  * Open cockpit exposure
 
+
+## Known issues ##
+
+* The [vehicle inventory database](https://github.com/vwhitteron/gt-telemetry/internal/vehicles/inventory.json) is missing information on some vehicles. Feel free to raise a pull request to add any missing or incorrect information.
+* The differential ratio may be incorrect for vehicles that are not defined in the inventory database. By default the ratio is based on the rolling diameter of the rear wheels so will result in an incorrect ratio for front wheel drive cars with staggered wheel diameters.
 
 
 ## Installation ##
@@ -28,21 +42,20 @@ go get github.com/vwhitteron/gt-telemetry
 import telemetry_client "github.com/vwhitteron/gt-telemetry"
 ```
 
-Construct a new GT client and start reading the telemetry stream.
+Construct a new GT client and start reading the telemetry stream. All configuration fields are optional with the default values show in the example.
 
 ```go
 config := telemetry_client.Config{
     IPAddr: "255.255.255.255",
     LogLevel: "info",
     StatsEnabled: false,
+    VehicleDB: "./internal/vehicles/inventory.json",
 }
 gt, _ := telemetry_client.NewGTClient(config)
 go gt.Run()
 ```
 
 _If the PlayStation is on the same network segment then you will probably find that the default broadcast address `255.255.255.255` will be sufficient to start reading data. If it does not work then enter the IP address of the PlayStation device instead._
-
-
 
 Read some data from the stream:
 

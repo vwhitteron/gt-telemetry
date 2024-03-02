@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/vwhitteron/gt-telemetry/internal/gttelemetry"
+	"github.com/vwhitteron/gt-telemetry/internal/vehicles"
 )
 
 type CornerSet struct {
@@ -63,11 +64,15 @@ type Vmax struct {
 
 type transformer struct {
 	RawTelemetry gttelemetry.GranTurismoTelemetry
+	inventory    *vehicles.Inventory
+	vehicle      vehicles.Vehicle
 }
 
-func NewTransformer() *transformer {
+func NewTransformer(inventory *vehicles.Inventory) *transformer {
 	return &transformer{
 		RawTelemetry: gttelemetry.GranTurismoTelemetry{},
+		inventory:    inventory,
+		vehicle:      vehicles.Vehicle{},
 	}
 }
 
@@ -138,15 +143,23 @@ func (t *transformer) CurrentLap() int16 {
 	return int16(t.RawTelemetry.CurrentLap)
 }
 
-// Ratio will be incorrect for FWD vehicles with staggered tyre rolling diameters
 func (t *transformer) DifferentialRatio() float32 {
+	t.updateVehicle()
+
 	transmission := t.Transmission()
 	if transmission.Gears == 0 {
 		return -1
 	}
 	highestRatio := transmission.GearRatios[transmission.Gears-1]
 	vMax := t.CalculatedVmax()
-	rollingDiameter := t.TyreDiameterMeters().RearLeft
+
+	rollingDiameter := float32(0)
+	switch t.vehicle.Drivetrain {
+	case "FF":
+		rollingDiameter = t.TyreDiameterMeters().FrontLeft
+	default:
+		rollingDiameter = t.TyreDiameterMeters().RearLeft
+	}
 
 	vMaxMetersPerMinute := float32(vMax.Speed) * 1000 / 60
 	wheelRpm := vMaxMetersPerMinute / (rollingDiameter * math.Pi)
@@ -407,7 +420,63 @@ func (t *transformer) TyreTemperatureCelsius() CornerSet {
 }
 
 func (t *transformer) VehicleID() uint32 {
+	t.updateVehicle()
+
 	return t.RawTelemetry.VehicleId
+}
+
+func (t *transformer) VehicleAspiration() string {
+	t.updateVehicle()
+
+	return t.vehicle.Aspiration
+}
+
+func (t *transformer) VehicleAspirationExpanded() string {
+	t.updateVehicle()
+
+	return t.vehicle.ExpandedAspiration()
+}
+
+func (t *transformer) VehicleType() string {
+	t.updateVehicle()
+
+	return t.vehicle.CarType
+}
+
+func (t *transformer) VehicleCategory() string {
+	t.updateVehicle()
+
+	return t.vehicle.Category
+}
+
+func (t *transformer) VehicleDrivetrain() string {
+	t.updateVehicle()
+
+	return t.vehicle.Drivetrain
+}
+
+func (t *transformer) VehicleManufacturer() string {
+	t.updateVehicle()
+
+	return t.vehicle.Manufacturer
+}
+
+func (t *transformer) VehicleModel() string {
+	t.updateVehicle()
+
+	return t.vehicle.Model
+}
+
+func (t *transformer) VehicleHasOpenCockpit() bool {
+	t.updateVehicle()
+
+	return t.vehicle.OpenCockpit
+}
+
+func (t *transformer) VehicleYear() int {
+	t.updateVehicle()
+
+	return t.vehicle.Year
 }
 
 func (t *transformer) WheelSpeedMetersPerSecond() CornerSet {
@@ -451,4 +520,15 @@ func (t *transformer) VelocityVector() Vector {
 
 func (t *transformer) WaterTemperatureCelsius() float32 {
 	return t.RawTelemetry.WaterTemperature
+}
+
+func (t *transformer) updateVehicle() {
+	if uint32(t.vehicle.ID) != t.RawTelemetry.VehicleId {
+		vehicle, err := t.inventory.GetVehicleByID(int(t.RawTelemetry.VehicleId))
+		if err != nil {
+			t.vehicle = vehicles.Vehicle{}
+		}
+
+		t.vehicle = vehicle
+	}
 }

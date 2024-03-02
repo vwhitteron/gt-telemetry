@@ -11,6 +11,7 @@ import (
 	"github.com/kaitai-io/kaitai_struct_go_runtime/kaitai"
 	"github.com/vwhitteron/gt-telemetry/internal/gttelemetry"
 	"github.com/vwhitteron/gt-telemetry/internal/utils"
+	"github.com/vwhitteron/gt-telemetry/internal/vehicles"
 	"golang.org/x/crypto/salsa20"
 )
 
@@ -36,6 +37,7 @@ type Config struct {
 	IPAddr       string
 	LogLevel     string
 	StatsEnabled bool
+	VehicleDB    string
 }
 
 type GTClient struct {
@@ -61,12 +63,21 @@ func NewGTClient(config Config) (*GTClient, error) {
 
 	}
 
+	if config.VehicleDB == "" {
+		config.VehicleDB = "./internal/vehicles/inventory.json"
+	}
+
+	inventory, err := vehicles.NewInventory(config.VehicleDB)
+	if err != nil {
+		return nil, err
+	}
+
 	return &GTClient{
 		logger:      logger,
 		ipAddr:      config.IPAddr,
 		sendPort:    33739,
 		receivePort: 33740,
-		Telemetry:   NewTransformer(),
+		Telemetry:   NewTransformer(inventory),
 		Statistics: &statistics{
 			enabled:           config.StatsEnabled,
 			decodeTimeLast:    time.Duration(0),

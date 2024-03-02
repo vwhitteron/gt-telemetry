@@ -63,9 +63,12 @@ func main() {
 		)
 
 		fmt.Println()
-		fmt.Printf("Vehicle       ID: %d  Turbocharged: %t\n",
+		fmt.Printf("Vehicle       ID: %d  Name: %s %s  Drivetrain: %s  Aspiration: %s\n",
 			client.Telemetry.VehicleID(),
-			hasTurbo,
+			client.Telemetry.VehicleManufacturer(),
+			client.Telemetry.VehicleModel(),
+			client.Telemetry.VehicleDrivetrain(),
+			client.Telemetry.VehicleAspirationExpanded(),
 		)
 
 		fmt.Println()

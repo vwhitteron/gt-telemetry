@@ -1,6 +1,7 @@
 
 # Change these variables as necessary.
 MAIN_PACKAGE_PATH := ./examples/simple
+BINARY_PATH := ./examples/bin
 BINARY_NAME := gt-telemetry
 
 
@@ -75,25 +76,39 @@ ifeq (, $(shell which kaitai-struct-compilerx))
 endif
 	@kaitai-struct-compiler --target go --go-package gttelemetry --outdir internal internal/kaitai/gran_turismo_telemetry.ksy
 
-## build: build the application
+## build: build the application for the local platform
 .PHONY: build
 build:
 	@go build -o examples/bin/${BINARY_NAME} ${MAIN_PACKAGE_PATH}
 
-.PHONY: build-darwin
-build-darwin:
-	@GOOS=darwin GOARCH=arm64 go build -o examples/bin/${BINARY_NAME}-darwin-arm64 ${MAIN_PACKAGE_PATH}
+## build/darwin/silicon: build the application for Apple Silicon
+.PHONY: build/darwin/silicon
+build/darwin/silicon:
+	@GOOS=darwin GOARCH=arm64 go build -o ${BINARY_PATH}/${BINARY_NAME}-darwin-arm64 ${MAIN_PACKAGE_PATH}
 
-.PHONY: build-linux
-build-linux:
-	@GOOS=linux GOARCH=amd64 go build -o examples/bin/${BINARY_NAME}-linux-amd64 ${MAIN_PACKAGE_PATH}
+## build/linux: build the application for Linux amd64
+.PHONY: build/linux
+build/linux:
+	@GOOS=linux GOARCH=amd64 go build -o ${BINARY_PATH}/${BINARY_NAME}-linux-amd64 ${MAIN_PACKAGE_PATH}
 
-.PHONY: build-rpi
-build-rpi:
-	@GOOS=linux GOARCH=arm64 go build -o examples/bin/${BINARY_NAME}-rpi-arm64 ${MAIN_PACKAGE_PATH}
+## build/rpi/v6: build the application for Raspberry Pi ARMv6
+.PHONY: build/rpi/v6
+build/rpi/v6:
+	@GOOS=linux GOARCH=arm GOARM=6 go build -o ${BINARY_PATH}/${BINARY_NAME}-rpi-armv6 ${MAIN_PACKAGE_PATH}
 
-.PHONY: build-windows
-build-windows:
+## build: build the application for Raspberry Pi ARMv7
+.PHONY: build/rpi/v7
+build/rpi/v7:
+	@GOOS=linux GOARCH=arm GOARM=7 go build -o ${BINARY_PATH}/${BINARY_NAME}-rpi-armv6 ${MAIN_PACKAGE_PATH}
+
+## build/rpi/v8: build the application for Raspberry Pi ARMv8
+.PHONY: build/rpi/v8
+build/rpi/armv8:
+	@GOOS=linux GOARCH=arm64 GOARM=8 go build -o ${BINARY_PATH}/${BINARY_NAME}-rpi-arm64 ${MAIN_PACKAGE_PATH}
+
+## build/windows: build the application for Windows amd64
+.PHONY: build/windows
+build/windows:
 	@GOOS=windows GOARCH=amd64 go build -o examples/bin/${BINARY_NAME}-amd64.exe ${MAIN_PACKAGE_PATH}
 
 ## run: run the  application

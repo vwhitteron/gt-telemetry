@@ -1,4 +1,15 @@
 {
+  "24": {
+    "Model": "180SX Type X '96",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1996,
+    "CarID": 24,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "31": {
     "Model": "Camaro Z28 '69",
     "Manufacturer": "Chevrolet",
@@ -21,6 +32,39 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "48": {
+    "Model": "Fairlady 240ZG (HS30) '71",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1971,
+    "CarID": 48,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "63": {
+    "Model": "Corolla Levin 1600GT APEX (AE86) '83",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1983,
+    "CarID": 63,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "78": {
+    "Model": "Silvia K's Aero (S14) '96",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1996,
+    "CarID": 78,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "82": {
     "Model": "Supra RZ '97",
     "Manufacturer": "Toyota",
@@ -29,6 +73,17 @@
     "Aspiration": "TC",
     "Year": 1997,
     "CarID": 82,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "104": {
+    "Model": "Sileighty '98",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1998,
+    "CarID": 104,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -142,6 +197,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "207": {
+    "Model": "MR2 GT-S '97",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 1997,
+    "CarID": 207,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "210": {
+    "Model": "R34 GT-R V･spec II Nür '02",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1989,
+    "CarID": 210,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "211": {
     "Model": "Lancer Evolution V GSR '98",
     "Manufacturer": "Mitsubishi",
@@ -216,6 +293,17 @@
     "Aspiration": "NA",
     "Year": 2000,
     "CarID": 334,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "345": {
+    "Model": "Sprinter Trueno 1600GT APEX (S.Shigeno Version)",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2000,
+    "CarID": 345,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -296,6 +384,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "489": {
+    "Model": "R33 GT-R V･spec '97",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1887,
+    "CarID": 489,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "514": {
     "Model": "S2000 '99",
     "Manufacturer": "Honda",
@@ -340,6 +439,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "604": {
+    "Model": "2000GT '67",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1967,
+    "CarID": 604,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "665": {
     "Model": "Superbird '70",
     "Manufacturer": "Plymouth",
@@ -359,6 +469,28 @@
     "Aspiration": "NA",
     "Year": 1995,
     "CarID": 688,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "709": {
+    "Model": "Fairlady Z 300ZX TT 2seater '89",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1989,
+    "CarID": 709,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "773": {
+    "Model": "R32 GT-R V･spec II '94",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1994,
+    "CarID": 773,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -395,6 +527,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "810": {
+    "Model": "Sprinter Trueno 1600GT APEX (AE86) '83",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1983,
+    "CarID": 810,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "818": {
     "Model": "Corvette (C2) '63",
     "Manufacturer": "Chevrolet",
@@ -425,6 +568,50 @@
     "Aspiration": "TC",
     "Year": 1991,
     "CarID": 829,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "836": {
+    "Model": "Skyline 2000GT-R (KPGC110) '73",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1973,
+    "CarID": 836,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "837": {
+    "Model": "Skyline Hard Top 2000GT-R (KPGC10) '70",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1970,
+    "CarID": 837,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "843": {
+    "Model": "Supra 3.0GT Turbo A '88",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1988,
+    "CarID": 843,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "919": {
+    "Model": "Silvia Q's (S13) '88",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1998,
+    "CarID": 919,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -494,6 +681,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1040": {
+    "Model": "Ford GT LM Race Car Spec II",
+    "Manufacturer": "Ford",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "SC",
+    "Year": 0,
+    "CarID": 1040,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "1044": {
+    "Model": "Sports 800 '65",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1965,
+    "CarID": 1044,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "1067": {
     "Model": "XJR-9 '88",
     "Manufacturer": "Jaguar",
@@ -546,6 +755,17 @@
     "Aspiration": "NA",
     "Year": 2006,
     "CarID": 1378,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1384": {
+    "Model": "Fairlady Z Version S (Z33) '07",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2007,
+    "CarID": 1384,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -612,6 +832,39 @@
     "Aspiration": "SC",
     "Year": 2006,
     "CarID": 1426,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1448": {
+    "Model": "SILVIA spec-R Aero (S15) '02",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2002,
+    "CarID": 1448,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1458": {
+    "Model": "Fairlady Z (Z34) '08",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2008,
+    "CarID": 1458,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1461": {
+    "Model": "Silvia K's Dia Selection (S13) '90",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1990,
+    "CarID": 1461,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -736,6 +989,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1537": {
+    "Model": "Prius G '09",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 2009,
+    "CarID": 1537,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "1539": {
     "Model": "GranTurismo S '08",
     "Manufacturer": "Maserati",
@@ -812,6 +1076,17 @@
     "CarID": 1562,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "1563": {
+    "Model": "Mégane Trophy '11",
+    "Manufacturer": "Renault",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 2011,
+    "CarID": 1563,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "1578": {
     "Model": "8C Competizione '08",
@@ -923,6 +1198,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1797": {
+    "Model": "SLS AMG GT3 '11",
+    "Manufacturer": "AMG",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2011,
+    "CarID": 1797,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "1893": {
     "Model": "Z8 '01",
     "Manufacturer": "BMW",
@@ -977,6 +1263,28 @@
     "CarID": 1900,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "1902": {
+    "Model": "Z4 GT3 '11",
+    "Manufacturer": "BMW",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2011,
+    "CarID": 1902,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "1904": {
+    "Model": "M3 GT '11",
+    "Manufacturer": "BMW",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2011,
+    "CarID": 1904,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "1905": {
     "Model": "GT-R NISMO GT3 '13",
@@ -1077,6 +1385,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1965": {
+    "Model": "R18 TDI '11",
+    "Manufacturer": "Audi",
+    "Category": "Gr.1",
+    "Drivetrain": "MR",
+    "Aspiration": "TD",
+    "Year": 2011,
+    "CarID": 1965,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "1973": {
     "Model": "Abarth 500 '09",
     "Manufacturer": "Abarth",
@@ -1098,6 +1417,17 @@
     "CarID": 1975,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "1984": {
+    "Model": "McLaren F1 GTR - BMW '95",
+    "Manufacturer": "McLaren",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1995,
+    "CarID": 1984,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "1985": {
     "Model": "Firebird Trans Am '78",
@@ -1140,6 +1470,17 @@
     "Aspiration": "NA",
     "Year": 1971,
     "CarID": 2018,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2026": {
+    "Model": "Aqua S '11",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 2011,
+    "CarID": 2026,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1208,6 +1549,17 @@
     "CarID": 2078,
     "OpenCockpit": true,
     "CarType": "race"
+  },
+  "2080": {
+    "Model": "FT-1",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2014,
+    "CarID": 2080,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "2101": {
     "Model": "TS030 Hybrid '12",
@@ -1308,6 +1660,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "2131": {
+    "Model": "V12 Vantage GT3 '12",
+    "Manufacturer": "Aston Martin",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2012,
+    "CarID": 2131,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "2134": {
     "Model": "Bugatti VGT",
     "Manufacturer": "Bugatti",
@@ -1349,6 +1712,28 @@
     "Aspiration": "NA",
     "Year": 2014,
     "CarID": 2139,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2143": {
+    "Model": "R8 LMS '15",
+    "Manufacturer": "Audi",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2143,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2144": {
+    "Model": "S-FR '15",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2144,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1407,6 +1792,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "2154": {
+    "Model": "86 GT '15",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2154,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "2155": {
     "Model": "Polo GTI '14",
     "Manufacturer": "Volkswagen",
@@ -1440,6 +1836,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "2158": {
+    "Model": "458 Italia GT3 '13",
+    "Manufacturer": "Ferrari",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2013,
+    "CarID": 2158,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "2159": {
     "Model": "Mustang Gr.3",
     "Manufacturer": "Ford",
@@ -1448,6 +1855,28 @@
     "Aspiration": "NA",
     "Year": 0,
     "CarID": 2159,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2161": {
+    "Model": "GT-R Gr.4",
+    "Manufacturer": "Nissan",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 2161,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2163": {
+    "Model": "Genesis Gr.4",
+    "Manufacturer": "Hyundai",
+    "Category": "Gr.4",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 2163,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -1461,6 +1890,28 @@
     "CarID": 2164,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "2166": {
+    "Model": "4C Gr.4",
+    "Manufacturer": "Alfa Romeo",
+    "Category": "Gr.4",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 2166,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2167": {
+    "Model": "GT-R '17",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2017,
+    "CarID": 2167,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "2169": {
     "Model": "TTS Coupé '14",
@@ -1495,6 +1946,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "2177": {
+    "Model": "Huracán GT3 '15",
+    "Manufacturer": "Lamborghini",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2177,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2178": {
+    "Model": "S-FR Racing Concept '16",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2016,
+    "CarID": 2178,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "2182": {
     "Model": "650S GT3 '15",
     "Manufacturer": "McLaren",
@@ -1517,6 +1990,39 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "2184": {
+    "Model": "F-type Gr.3",
+    "Manufacturer": "Jaguar",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "SC",
+    "Year": 0,
+    "CarID": 2184,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2185": {
+    "Model": "Lancer Evolution Final Gr.3",
+    "Manufacturer": "Mitsubishi",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 2185,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2186": {
+    "Model": "WRX Gr.3",
+    "Manufacturer": "Subaru",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 2186,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "2187": {
     "Model": "FT-1 VGT (Gr.3)",
     "Manufacturer": "Toyota",
@@ -1526,6 +2032,39 @@
     "Year": 0,
     "CarID": 2187,
     "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2188": {
+    "Model": "R.S.01 GT3 '16",
+    "Manufacturer": "Renault",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 2016,
+    "CarID": 2188,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2190": {
+    "Model": "GT by Citroën Race Car (Gr.3)",
+    "Manufacturer": "Citroën",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 2190,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "2192": {
+    "Model": "Volkswagen GTI VGT (Gr.3)",
+    "Manufacturer": "Volkswagen",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 2192,
+    "OpenCockpit": true,
     "CarType": "race"
   },
   "2383": {
@@ -1538,6 +2077,39 @@
     "CarID": 2383,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3183": {
+    "Model": "PEUGEOT VGT (Gr.3)",
+    "Manufacturer": "Peugeot",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3183,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3185": {
+    "Model": "4C Gr.3",
+    "Manufacturer": "Alfa Romeo",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3185,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3192": {
+    "Model": "SLS AMG Gr.4",
+    "Manufacturer": "AMG",
+    "Category": "Gr.4",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3192,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "3214": {
     "Model": "Civic Type R (FK2) '15",
@@ -1572,6 +2144,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3218": {
+    "Model": "M6 GT3 Endurance Model '16",
+    "Manufacturer": "BMW",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2016,
+    "CarID": 3218,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3219": {
     "Model": "NSX '17",
     "Manufacturer": "Honda",
@@ -1591,6 +2174,61 @@
     "Aspiration": "TC",
     "Year": 2015,
     "CarID": 3220,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3221": {
+    "Model": "M6 GT3 Sprint Model '16",
+    "Manufacturer": "BMW",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2016,
+    "CarID": 3221,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3222": {
+    "Model": "86 GRMN '16",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3222,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3223": {
+    "Model": "Viper SRT GT3-R '15",
+    "Manufacturer": "Dodge",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 3223,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3224": {
+    "Model": "Mercedes-AMG GT3 '16",
+    "Manufacturer": "AMG",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3224,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3225": {
+    "Model": "GT-R Safety Car",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3225,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1627,6 +2265,50 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3231": {
+    "Model": "Scirocco Gr.4",
+    "Manufacturer": "Volkswagen",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3231,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3235": {
+    "Model": "NSX Gr.3",
+    "Manufacturer": "Honda",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3235,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3237": {
+    "Model": "Atenza Gr.3",
+    "Manufacturer": "Mazda",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3237,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3238": {
+    "Model": "RCZ Gr.3",
+    "Manufacturer": "Peugeot",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3238,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3239": {
     "Model": "NSX Gr.B Rally Car",
     "Manufacturer": "Honda",
@@ -1649,6 +2331,50 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3245": {
+    "Model": "M4 Gr.4",
+    "Manufacturer": "BMW",
+    "Category": "Gr.4",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3245,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3246": {
+    "Model": "Veyron Gr.4",
+    "Manufacturer": "Bugatti",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3246,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3247": {
+    "Model": "Corvette C7 Gr.4",
+    "Manufacturer": "Chevrolet",
+    "Category": "Gr.4",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3247,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3248": {
+    "Model": "GT by Citroën Gr.4",
+    "Manufacturer": "Citroën",
+    "Category": "Gr.4",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3248,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3249": {
     "Model": "Viper Gr.4",
     "Manufacturer": "Dodge",
@@ -1657,6 +2383,17 @@
     "Aspiration": "NA",
     "Year": 0,
     "CarID": 3249,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3251": {
+    "Model": "NSX Gr.4",
+    "Manufacturer": "Honda",
+    "Category": "Gr.4",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3251,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -1671,6 +2408,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3253": {
+    "Model": "Huracán Gr.4",
+    "Manufacturer": "Lamborghini",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3253,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3254": {
     "Model": "RC F Gr.4",
     "Manufacturer": "Lexus",
@@ -1679,6 +2427,17 @@
     "Aspiration": "NA",
     "Year": 0,
     "CarID": 3254,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3256": {
+    "Model": "Atenza Gr.4",
+    "Manufacturer": "Mazda",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3256,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -1693,6 +2452,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3258": {
+    "Model": "Lancer Evolution Final Gr.4",
+    "Manufacturer": "Mitsubishi",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3258,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3259": {
     "Model": "RCZ Gr.4",
     "Manufacturer": "Peugeot",
@@ -1704,6 +2474,28 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3260": {
+    "Model": "Mégane Gr.4",
+    "Manufacturer": "Renault",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3260,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3261": {
+    "Model": "WRX Gr.4",
+    "Manufacturer": "Subaru",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3261,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3262": {
     "Model": "86 Gr.4",
     "Manufacturer": "Toyota",
@@ -1712,6 +2504,17 @@
     "Aspiration": "NA",
     "Year": 0,
     "CarID": 3262,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3263": {
+    "Model": "458 Italia Gr.4",
+    "Manufacturer": "Ferrari",
+    "Category": "Gr.4",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3263,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -1759,10 +2562,43 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3268": {
+    "Model": "911 GT3 RS (991) '16",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3268,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3295": {
+    "Model": "86 GT\"Limited\" '16",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3295,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3298": {
+    "Model": "TT Cup '16",
+    "Manufacturer": "Audi",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3298,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3300": {
     "Model": "Mustang Gr.3 Road Car",
     "Manufacturer": "Ford",
-    "Category": "Gr.3",
+    "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
     "Year": 0,
@@ -1776,7 +2612,7 @@
     "Category": "Gr.3",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 0,
+    "Year": 2017,
     "CarID": 3305,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1924,6 +2760,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3345": {
+    "Model": "GT-R NISMO '17",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2017,
+    "CarID": 3345,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3346": {
     "Model": "Mach Forty",
     "Manufacturer": "Eckert's Rod & Custom",
@@ -2034,6 +2881,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3358": {
+    "Model": "911 GT3 (996) '01",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 2001,
+    "CarID": 3358,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3359": {
+    "Model": "911 GT3 (997) '09",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 2009,
+    "CarID": 3359,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3360": {
     "Model": "McLaren P1 GTR '16",
     "Manufacturer": "McLaren",
@@ -2064,6 +2933,39 @@
     "Aspiration": "NA",
     "Year": 0,
     "CarID": 3364,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3365": {
+    "Model": "356 A/1500 GS GT Carrera Speedster '56",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1956,
+    "CarID": 3365,
+    "OpenCockpit": true,
+    "CarType": "street"
+  },
+  "3367": {
+    "Model": "GR Supra RZ '19",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2019,
+    "CarID": 3367,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3368": {
+    "Model": "Tundra TRD Pro '19",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2019,
+    "CarID": 3368,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2122,6 +3024,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3375": {
+    "Model": "356 A/1500 GS Carrera '56",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1956,
+    "CarID": 3375,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3377": {
     "Model": "Super Bee '70",
     "Manufacturer": "Dodge",
@@ -2152,6 +3065,17 @@
     "Aspiration": "TC",
     "Year": 1991,
     "CarID": 3384,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3385": {
+    "Model": "911 Turbo (930) '81",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "TC",
+    "Year": 1981,
+    "CarID": 3385,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2188,6 +3112,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3390": {
+    "Model": "Taycan Turbo S '19",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "EV",
+    "Year": 2019,
+    "CarID": 3390,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3391": {
     "Model": "Shelby GT350R '16",
     "Manufacturer": "Ford",
@@ -2199,12 +3134,23 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3393": {
+    "Model": "Carrera GT '04",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2004,
+    "CarID": 3393,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3394": {
     "Model": "DBR9 GT1 '10",
     "Manufacturer": "Aston Martin",
     "Category": "Gr.3",
     "Drivetrain": "FR",
-    "Aspiration": "",
+    "Aspiration": "NA",
     "Year": 2010,
     "CarID": 3394,
     "OpenCockpit": false,
@@ -2243,6 +3189,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "3401": {
+    "Model": "Crown Athlete G '13",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2013,
+    "CarID": 3401,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3402": {
     "Model": "Ford GT '17",
     "Manufacturer": "Ford",
@@ -2262,6 +3219,17 @@
     "Aspiration": "NA",
     "Year": 1983,
     "CarID": 3403,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3404": {
+    "Model": "911 Carrera RS CS (993) '95",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1995,
+    "CarID": 3404,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2298,6 +3266,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3408": {
+    "Model": "Crown Athlete G Safety Car",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3408,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3409": {
     "Model": "Mono '16",
     "Manufacturer": "BAC",
@@ -2331,13 +3310,24 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3418": {
+    "Model": "GR Supra RZ '20",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2020,
+    "CarID": 3418,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3419": {
     "Model": "RX-VISION GT3 CONCEPT",
     "Manufacturer": "Mazda",
     "Category": "Gr.3",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 0,
+    "Year": 2020,
     "CarID": 3419,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2386,6 +3376,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3429": {
+    "Model": "Fairlady Z 432 '69",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1969,
+    "CarID": 3429,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3430": {
     "Model": "Willys MB '45",
     "Manufacturer": "Jeep",
@@ -2395,6 +3396,17 @@
     "Year": 1945,
     "CarID": 3430,
     "OpenCockpit": true,
+    "CarType": "street"
+  },
+  "3431": {
+    "Model": "911 Carrera RS (964) '92",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1992,
+    "CarID": 3431,
+    "OpenCockpit": false,
     "CarType": "street"
   },
   "3432": {
@@ -2419,6 +3431,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3436": {
+    "Model": "Ford GT Race Car '18",
+    "Manufacturer": "Ford",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 2018,
+    "CarID": 3436,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3437": {
     "Model": "Mangusta '69",
     "Manufacturer": "De Tomaso",
@@ -2438,6 +3461,17 @@
     "Aspiration": "NA",
     "Year": 1970,
     "CarID": 3438,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3439": {
+    "Model": "911 Carrera RS (993) '95",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1995,
+    "CarID": 3439,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2485,6 +3519,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3446": {
+    "Model": "Spyder type 550/1500RS '55",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1955,
+    "CarID": 3446,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
   "3449": {
     "Model": "Corvette C7 ZR1 '19",
     "Manufacturer": "Chevrolet",
@@ -2506,6 +3551,17 @@
     "CarID": 3450,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "3451": {
+    "Model": "GR Yaris RZ \"High performance\" '20",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2020,
+    "CarID": 3451,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "3453": {
     "Model": "M3 '89",
@@ -2617,6 +3673,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3471": {
+    "Model": "Celica GT-Four (ST205) '94",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1994,
+    "CarID": 3471,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3473": {
     "Model": "Chiron '16",
     "Manufacturer": "Bugatti",
@@ -2627,6 +3694,17 @@
     "CarID": 3473,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3474": {
+    "Model": "BRZ GT300 '21",
+    "Manufacturer": "Subaru",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2021,
+    "CarID": 3474,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "3475": {
     "Model": "MP4/4 '88",
@@ -2648,6 +3726,39 @@
     "Year": 2022,
     "CarID": 3476,
     "OpenCockpit": true,
+    "CarType": "street"
+  },
+  "3477": {
+    "Model": "Silvia spec-R Aero (S15) Touring Car",
+    "Manufacturer": "Nissan",
+    "Category": "Gr.4",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3477,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3480": {
+    "Model": "Swift Sport Gr.4",
+    "Manufacturer": "Suzuki",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3480,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3481": {
+    "Model": "GR86 RZ '21",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2021,
+    "CarID": 3481,
+    "OpenCockpit": false,
     "CarType": "street"
   },
   "3485": {
@@ -2683,6 +3794,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3488": {
+    "Model": "Cayman GT4 '16",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3488,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3489": {
     "Model": "A6GCS/53 Spyder '54",
     "Manufacturer": "Maserati",
@@ -2704,6 +3826,17 @@
     "CarID": 3493,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "3494": {
+    "Model": "Alphard Executive Lounge '18",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2018,
+    "CarID": 3494,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "3499": {
     "Model": "GR010 HYBRID '21",
@@ -2727,6 +3860,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3501": {
+    "Model": "G70 GR4",
+    "Manufacturer": "Genesis",
+    "Category": "Gr.4",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3501,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3502": {
     "Model": "Genesis X GR3",
     "Manufacturer": "Genesis",
@@ -2737,6 +3881,28 @@
     "CarID": 3502,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "3503": {
+    "Model": "RX-VISION GT3 CONCEPT Stealth Model",
+    "Manufacturer": "Mazda",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3503,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3504": {
+    "Model": "Z Performance '23",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2023,
+    "CarID": 3504,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "3505": {
     "Model": "Mangusta (Christian Dior)",
@@ -2771,6 +3937,28 @@
     "OpenCockpit": true,
     "CarType": "street"
   },
+  "3508": {
+    "Model": "SUZUKI VGT (Gr.3)",
+    "Manufacturer": "Suzuki",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2022,
+    "CarID": 3508,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
+  "3509": {
+    "Model": "911 Carrera RS (901) '73",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 1973,
+    "CarID": 3509,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3512": {
     "Model": "Roadster NR-A (ND) '22",
     "Manufacturer": "Mazda",
@@ -2781,6 +3969,17 @@
     "CarID": 3512,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "3513": {
+    "Model": "Silvia K's Type S (S14) '94",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1994,
+    "CarID": 3513,
+    "OpenCockpit": false,
+    "CarType": "street"
   },
   "3514": {
     "Model": "DS 21 Pallas '70",
@@ -2812,6 +4011,17 @@
     "Aspiration": "NA",
     "Year": 2020,
     "CarID": 3518,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3519": {
+    "Model": "959 '87",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "2WD",
+    "Aspiration": "TC",
+    "Year": 1987,
+    "CarID": 3519,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2848,6 +4058,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3524": {
+    "Model": "R32 GT-R NISMO '90",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1990,
+    "CarID": 3524,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3525": {
     "Model": "RA272 '65",
     "Manufacturer": "Honda",
@@ -2881,6 +4102,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3531": {
+    "Model": "Mercedes-AMG GT3 '20",
+    "Manufacturer": "AMG",
+    "Category": "Gr.3",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2020,
+    "CarID": 3531,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "3532": {
     "Model": "Valkyrie '21",
     "Manufacturer": "Aston Martin",
@@ -2903,6 +4135,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3534": {
+    "Model": "Himedic '21",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2021,
+    "CarID": 3534,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3535": {
+    "Model": "GR Corolla MORIZO Edition '22",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2022,
+    "CarID": 3535,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3536": {
     "Model": "Civic Type R (FL5) '22",
     "Manufacturer": "Honda",
@@ -2913,6 +4167,17 @@
     "CarID": 3536,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3537": {
+    "Model": "MAZDA3 Gr.4",
+    "Manufacturer": "Mazda",
+    "Category": "Gr.4",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 3537,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "3538": {
     "Model": "Charger R/T 426 Hemi '68",

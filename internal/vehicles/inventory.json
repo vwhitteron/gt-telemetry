@@ -989,6 +989,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1536": {
+    "Model": "Zonda R '09",
+    "Manufacturer": "Pagani",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2009,
+    "CarID": 1536,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "1537": {
     "Model": "Prius G '09",
     "Manufacturer": "Toyota",
@@ -1118,6 +1129,17 @@
     "Aspiration": "NA",
     "Year": 1962,
     "CarID": 1671,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1582": {
+    "Model": "Miura P400 Bertone Prototype '67",
+    "Manufacturer": "Lamborghini",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1967,
+    "CarID": 1582,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1459,6 +1481,17 @@
     "Aspiration": "NA",
     "Year": 2000,
     "CarID": 1990,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2011": {
+    "Model": "500 Mondial Pinin Farina Coupe '54",
+    "Manufacturer": "Ferrari",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1954,
+    "CarID": 2011,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2925,6 +2958,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3362": {
+    "Model": "F50 '95",
+    "Manufacturer": "Ferrari",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1995,
+    "CarID": 3362,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3364": {
     "Model": "Greddy Fugu Z",
     "Manufacturer": "Greddy",
@@ -3956,6 +4000,17 @@
     "Aspiration": "NA",
     "Year": 1973,
     "CarID": 3509,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3510": {
+    "Model": "Ferrari VGT",
+    "Manufacturer": "Ferrari",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2022,
+    "CarID": 3510,
     "OpenCockpit": false,
     "CarType": "street"
   },

@@ -60,11 +60,6 @@ func NewGTClient(config Config) (*GTClient, error) {
 
 	if config.IPAddr == "" {
 		config.IPAddr = "255.255.255.255"
-
-	}
-
-	if config.VehicleDB == "" {
-		config.VehicleDB = "./internal/vehicles/inventory.json"
 	}
 
 	inventory, err := vehicles.NewInventory(config.VehicleDB)

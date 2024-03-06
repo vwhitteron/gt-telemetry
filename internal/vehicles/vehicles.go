@@ -1,6 +1,7 @@
 package vehicles
 
 import (
+	_ "embed"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -23,18 +24,25 @@ type Inventory struct {
 	db map[string]Vehicle
 }
 
+//go:embed inventory.json
+var baseInventoryJSON []byte
+
 func NewInventory(file string) (*Inventory, error) {
 	inventory := Inventory{}
 
-	jsonData, err := os.ReadFile(file)
-	if err != nil {
-		fmt.Printf("could not read file: %s\n", err)
-		return &Inventory{}, err
+	jsonData := baseInventoryJSON
+	if file != "" {
+		var err error
+		jsonData, err = os.ReadFile(file)
+		if err != nil {
+			fmt.Printf("failed to read file: %s\n", err)
+			return &Inventory{}, err
+		}
 	}
 
-	err = json.Unmarshal([]byte(jsonData), &inventory.db)
+	err := json.Unmarshal([]byte(jsonData), &inventory.db)
 	if err != nil {
-		fmt.Printf("could not unmarshal json: %s\n", err)
+		fmt.Printf("failed to unmarshal json: %s\n", err)
 		return &Inventory{}, err
 	}
 

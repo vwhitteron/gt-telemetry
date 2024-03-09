@@ -45,8 +45,8 @@ type GTClient struct {
 	ipAddr      string
 	sendPort    int
 	receivePort int
-	Telemetry   *transformer
-	Statistics  *statistics
+	Statistics *statistics
+	Telemetry  *transformer
 }
 
 func NewGTClient(config Config) (*GTClient, error) {
@@ -72,7 +72,6 @@ func NewGTClient(config Config) (*GTClient, error) {
 		ipAddr:      config.IPAddr,
 		sendPort:    33739,
 		receivePort: 33740,
-		Telemetry:   NewTransformer(inventory),
 		Statistics: &statistics{
 			enabled:           config.StatsEnabled,
 			decodeTimeLast:    time.Duration(0),
@@ -88,6 +87,7 @@ func NewGTClient(config Config) (*GTClient, error) {
 			PacketsInvalid:    0,
 			packetIDLast:      0,
 		},
+		Telemetry: NewTransformer(inventory),
 	}, nil
 }
 

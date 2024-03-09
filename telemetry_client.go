@@ -41,12 +41,13 @@ type Config struct {
 }
 
 type GTClient struct {
-	logger      *utils.Logger
-	ipAddr      string
-	sendPort    int
-	receivePort int
-	Statistics *statistics
-	Telemetry  *transformer
+	logger           *utils.Logger
+	ipAddr           string
+	sendPort         int
+	receivePort      int
+	DecipheredPacket []byte
+	Statistics       *statistics
+	Telemetry        *transformer
 }
 
 func NewGTClient(config Config) (*GTClient, error) {
@@ -68,10 +69,11 @@ func NewGTClient(config Config) (*GTClient, error) {
 	}
 
 	return &GTClient{
-		logger:      logger,
-		ipAddr:      config.IPAddr,
-		sendPort:    33739,
-		receivePort: 33740,
+		logger:           logger,
+		ipAddr:           config.IPAddr,
+		sendPort:         33739,
+		receivePort:      33740,
+		DecipheredPacket: []byte{},
 		Statistics: &statistics{
 			enabled:           config.StatsEnabled,
 			decodeTimeLast:    time.Duration(0),
@@ -129,9 +131,9 @@ func (c *GTClient) Run() {
 
 		decodeStart := time.Now()
 
-		telemetryData := salsa20Decode(buffer[:bufLen])
+		c.DecipheredPacket = salsa20Decode(buffer[:bufLen])
 
-		reader := bytes.NewReader(telemetryData)
+		reader := bytes.NewReader(c.DecipheredPacket)
 		stream := kaitai.NewStream(reader)
 
 		err = rawTelemetry.Read(stream, nil, nil)

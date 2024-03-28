@@ -98,6 +98,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "116": {
+    "Model": "GT-One (TS020) '99",
+    "Manufacturer": "Toyota",
+    "Category": "Gr.2",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 1999,
+    "CarID": 116,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
   "135": {
     "Model": "S800 '66",
     "Manufacturer": "Honda",
@@ -3079,6 +3090,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3376": {
+    "Model": "D-type'54",
+    "Manufacturer": "Jaguar",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1954,
+    "CarID": 3376,
+    "OpenCockpit": true,
+    "CarType": "street"
+  },
   "3377": {
     "Model": "Super Bee '70",
     "Manufacturer": "Dodge",
@@ -3330,6 +3352,17 @@
     "Year": 2016,
     "CarID": 3409,
     "OpenCockpit": true,
+    "CarType": "street"
+  },
+  "3412": {
+    "Model": "R8 Coupé V10 plus '16",
+    "Manufacturer": "Audi",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3412,
+    "OpenCockpit": false,
     "CarType": "street"
   },
   "3413": {
@@ -4297,6 +4330,17 @@
     "Aspiration": "NA",
     "Year": 1985,
     "CarID": 3547,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3548": {
+    "Model": "Urus '18",
+    "Manufacturer": "Lamborghini",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2018,
+    "CarID": 3548,
     "OpenCockpit": false,
     "CarType": "street"
   }

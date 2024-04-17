@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	clientConfig := telemetry_client.Config{
+	clientConfig := telemetry_client.GTClientOpts{
 		StatsEnabled: true,
 	}
 

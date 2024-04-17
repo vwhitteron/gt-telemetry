@@ -3,14 +3,13 @@ package telemetry
 import (
 	"bytes"
 	"encoding/binary"
-	"fmt"
-	"log"
 	"net"
+	"os"
 	"time"
 
 	"github.com/kaitai-io/kaitai_struct_go_runtime/kaitai"
+	"github.com/rs/zerolog"
 	"github.com/vwhitteron/gt-telemetry/internal/gttelemetry"
-	"github.com/vwhitteron/gt-telemetry/internal/utils"
 	"github.com/vwhitteron/gt-telemetry/internal/vehicles"
 	"golang.org/x/crypto/salsa20"
 )
@@ -33,15 +32,16 @@ type statistics struct {
 	PacketsTotal      int
 }
 
-type Config struct {
+type GTClientOpts struct {
 	IPAddr       string
 	LogLevel     string
+	Logger       *zerolog.Logger
 	StatsEnabled bool
 	VehicleDB    string
 }
 
 type GTClient struct {
-	logger      *utils.Logger
+	log         zerolog.Logger
 	ipAddr      string
 	sendPort    int
 	receivePort int
@@ -49,32 +49,45 @@ type GTClient struct {
 	Statistics  *statistics
 }
 
-func NewGTClient(config Config) (*GTClient, error) {
-	if config.LogLevel == "" {
-		config.LogLevel = "info"
-	}
-	logger, err := utils.NewLogger(config.LogLevel)
-	if err != nil {
-		return nil, err
-	}
-
-	if config.IPAddr == "" {
-		config.IPAddr = "255.255.255.255"
+func NewGTClient(opts GTClientOpts) (*GTClient, error) {
+	var log zerolog.Logger
+	if opts.Logger != nil {
+		log = *opts.Logger
+	} else {
+		log = zerolog.New(os.Stdout).With().Timestamp().Logger()
 	}
 
-	inventory, err := vehicles.NewInventory(config.VehicleDB)
+	switch opts.LogLevel {
+	case "debug":
+		log = log.Level(zerolog.DebugLevel)
+	case "info":
+		log = log.Level(zerolog.InfoLevel)
+	case "warn":
+		log = log.Level(zerolog.WarnLevel)
+	case "error":
+		log = log.Level(zerolog.ErrorLevel)
+	default:
+		log = log.Level(zerolog.WarnLevel)
+		log.Warn().Msg("Invalid log level, defaulting to warn")
+	}
+
+	if opts.IPAddr == "" {
+		opts.IPAddr = "255.255.255.255"
+	}
+
+	inventory, err := vehicles.NewInventory(opts.VehicleDB)
 	if err != nil {
 		return nil, err
 	}
 
 	return &GTClient{
-		logger:      logger,
-		ipAddr:      config.IPAddr,
+		log:         log,
+		ipAddr:      opts.IPAddr,
 		sendPort:    33739,
 		receivePort: 33740,
 		Telemetry:   NewTransformer(inventory),
 		Statistics: &statistics{
-			enabled:           config.StatsEnabled,
+			enabled:           opts.StatsEnabled,
 			decodeTimeLast:    time.Duration(0),
 			packetRateLast:    time.Now(),
 			DecodeTimeAvg:     time.Duration(0),
@@ -94,12 +107,12 @@ func NewGTClient(config Config) (*GTClient, error) {
 func (c *GTClient) Run() {
 	addr, err := net.ResolveUDPAddr("udp", ":33740")
 	if err != nil {
-		log.Fatal(err)
+		c.log.Fatal().Msgf("resolve UDP address: %s", err.Error())
 	}
 
 	conn, err := net.ListenUDP("udp", addr)
 	if err != nil {
-		log.Fatal(err)
+		c.log.Fatal().Msgf("listen UDP: %s", err.Error())
 	}
 	defer conn.Close()
 
@@ -118,12 +131,12 @@ func (c *GTClient) Run() {
 		buffer := make([]byte, 4096)
 		bufLen, _, err := conn.ReadFromUDP(buffer)
 		if err != nil {
-			c.logger.Debug(fmt.Sprintf("Failed to receive telemetry: %s", err.Error()))
+			c.log.Debug().Msgf("failed to receive telemetry: %s", err.Error())
 			continue
 		}
 
 		if len(buffer[:bufLen]) == 0 {
-			c.logger.Debug("No data received")
+			c.log.Debug().Msg("no data received")
 			continue
 		}
 
@@ -136,7 +149,7 @@ func (c *GTClient) Run() {
 
 		err = rawTelemetry.Read(stream, nil, nil)
 		if err != nil {
-			c.logger.Error(fmt.Sprintf("Failed to parse telemetry: %s", err.Error()))
+			c.log.Error().Msgf("failed to parse telemetry: %s", err.Error())
 			c.Statistics.PacketsInvalid++
 		}
 
@@ -167,10 +180,10 @@ func (c *GTClient) collectStats() {
 
 		delta := int(c.Telemetry.SequenceID() - c.Statistics.packetIDLast)
 		if delta > 1 {
-			c.logger.Warn(fmt.Sprintf("Dropped packets detected: %d", delta-1))
+			c.log.Warn().Int("dropped", delta-1).Msg("dropped packets detected")
 			c.Statistics.PacketsDropped += int(delta - 1)
 		} else if delta < 0 {
-			c.logger.Warn("Delayed packet deteted")
+			c.log.Warn().Msg("delayed packet detected")
 		}
 
 		c.Statistics.packetIDLast = c.Telemetry.SequenceID()
@@ -189,7 +202,7 @@ func (c *GTClient) collectStats() {
 }
 
 func (c *GTClient) SendHeartbeat(conn *net.UDPConn) {
-	c.logger.Debug("Sending heartbeat")
+	c.log.Debug().Msg("Sending heartbeat")
 	c.Statistics.Heartbeat = true
 	defer func() {
 		time.Sleep(250 * time.Millisecond)
@@ -201,11 +214,11 @@ func (c *GTClient) SendHeartbeat(conn *net.UDPConn) {
 		Port: c.sendPort,
 	})
 	if err != nil {
-		log.Fatal(err)
+		c.log.Fatal().Msgf("write to udp: %s", err.Error())
 	}
 	err = conn.SetReadDeadline(time.Now().Add(10 * time.Second))
 	if err != nil {
-		log.Fatal(err)
+		c.log.Fatal().Msgf("set read deadline: %s", err.Error())
 	}
 }
 

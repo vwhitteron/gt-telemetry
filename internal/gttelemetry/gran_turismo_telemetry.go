@@ -3,63 +3,63 @@
 package gttelemetry
 
 import (
-	"github.com/kaitai-io/kaitai_struct_go_runtime/kaitai"
 	"bytes"
+	"github.com/kaitai-io/kaitai_struct_go_runtime/kaitai"
 )
 
 type GranTurismoTelemetry struct {
-	Header *GranTurismoTelemetry_Header
-	MapPositionCoordinates *GranTurismoTelemetry_Coordinate
-	VelocityVector *GranTurismoTelemetry_Vector
-	RotationAxes *GranTurismoTelemetry_SymmetryAxes
-	Heading float32
-	AngularVelocityVector *GranTurismoTelemetry_Vector
-	RideHeight float32
-	EngineRpm float32
-	Oiv float32
-	FuelLevel float32
-	FuelCapacity float32
-	GroundSpeed float32
-	ManifoldPressure float32
-	OilPressure float32
-	WaterTemperature float32
-	OilTemperature float32
-	TyreTemperature *GranTurismoTelemetry_CornerSet
-	SequenceId uint32
-	CurrentLap uint16
-	RaceLaps uint16
-	BestLaptime int32
-	LastLaptime int32
-	TimeOfDay uint32
-	StartingPosition int16
-	RaceEntrants int16
-	RevLightRpmMin uint16
-	RevLightRpmMax uint16
-	CalculatedMaxSpeed uint16
-	Flags *GranTurismoTelemetry_Flags
-	TransmissionGear *GranTurismoTelemetry_TransmissionGear
-	Throttle uint8
-	Brake uint8
-	Ignore1 []byte
-	RoadPlaneVector *GranTurismoTelemetry_Vector
-	RoadPlaneDistance uint32
-	WheelRadiansPerSecond *GranTurismoTelemetry_CornerSet
-	TyreRadius *GranTurismoTelemetry_CornerSet
-	SuspensionHeight *GranTurismoTelemetry_CornerSet
-	Reserved []byte
-	ClutchActuation float32
-	ClutchEngagement float32
-	CluchOutputRpm float32
+	Header                    *GranTurismoTelemetry_Header
+	MapPositionCoordinates    *GranTurismoTelemetry_Coordinate
+	VelocityVector            *GranTurismoTelemetry_Vector
+	RotationAxes              *GranTurismoTelemetry_SymmetryAxes
+	Heading                   float32
+	AngularVelocityVector     *GranTurismoTelemetry_Vector
+	RideHeight                float32
+	EngineRpm                 float32
+	Oiv                       float32
+	FuelLevel                 float32
+	FuelCapacity              float32
+	GroundSpeed               float32
+	ManifoldPressure          float32
+	OilPressure               float32
+	WaterTemperature          float32
+	OilTemperature            float32
+	TyreTemperature           *GranTurismoTelemetry_CornerSet
+	SequenceId                uint32
+	CurrentLap                uint16
+	RaceLaps                  uint16
+	BestLaptime               int32
+	LastLaptime               int32
+	TimeOfDay                 uint32
+	StartingPosition          int16
+	RaceEntrants              int16
+	RevLightRpmMin            uint16
+	RevLightRpmMax            uint16
+	CalculatedMaxSpeed        uint16
+	Flags                     *GranTurismoTelemetry_Flags
+	TransmissionGear          *GranTurismoTelemetry_TransmissionGear
+	Throttle                  uint8
+	Brake                     uint8
+	Ignore1                   []byte
+	RoadPlaneVector           *GranTurismoTelemetry_Vector
+	RoadPlaneDistance         uint32
+	WheelRadiansPerSecond     *GranTurismoTelemetry_CornerSet
+	TyreRadius                *GranTurismoTelemetry_CornerSet
+	SuspensionHeight          *GranTurismoTelemetry_CornerSet
+	Reserved                  []byte
+	ClutchActuation           float32
+	ClutchEngagement          float32
+	CluchOutputRpm            float32
 	TransmissionTopSpeedRatio float32
-	TransmissionGearRatio *GranTurismoTelemetry_GearRatio
-	VehicleId uint32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
-	_parent interface{}
+	TransmissionGearRatio     *GranTurismoTelemetry_GearRatio
+	VehicleId                 uint32
+	_io                       *kaitai.Stream
+	_root                     *GranTurismoTelemetry
+	_parent                   interface{}
 }
+
 func NewGranTurismoTelemetry() *GranTurismoTelemetry {
-	return &GranTurismoTelemetry{
-	}
+	return &GranTurismoTelemetry{}
 }
 
 func (this *GranTurismoTelemetry) Read(io *kaitai.Stream, parent interface{}, root *GranTurismoTelemetry) (err error) {
@@ -314,29 +314,29 @@ func (this *GranTurismoTelemetry) Read(io *kaitai.Stream, parent interface{}, ro
  * Various flags for the current state of play and instrument cluster lights
  */
 type GranTurismoTelemetry_Flags struct {
-	Live bool
-	GamePaused bool
-	Loading bool
-	InGear bool
-	HasTurbo bool
-	RevLimiterAlert bool
-	HandBrakeActive bool
+	Live             bool
+	GamePaused       bool
+	Loading          bool
+	InGear           bool
+	HasTurbo         bool
+	RevLimiterAlert  bool
+	HandBrakeActive  bool
 	HeadlightsActive bool
-	HighBeamActive bool
-	LowBeamActive bool
-	AsmActive bool
-	TcsActive bool
-	Flag13 bool
-	Flag14 bool
-	Flag15 bool
-	Flag16 bool
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
-	_parent *GranTurismoTelemetry
+	HighBeamActive   bool
+	LowBeamActive    bool
+	AsmActive        bool
+	TcsActive        bool
+	Flag13           bool
+	Flag14           bool
+	Flag15           bool
+	Flag16           bool
+	_io              *kaitai.Stream
+	_root            *GranTurismoTelemetry
+	_parent          *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_Flags() *GranTurismoTelemetry_Flags {
-	return &GranTurismoTelemetry_Flags{
-	}
+	return &GranTurismoTelemetry_Flags{}
 }
 
 func (this *GranTurismoTelemetry_Flags) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -434,13 +434,13 @@ type GranTurismoTelemetry_Vector struct {
 	VectorX float32
 	VectorY float32
 	VectorZ float32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
+	_io     *kaitai.Stream
+	_root   *GranTurismoTelemetry
 	_parent *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_Vector() *GranTurismoTelemetry_Vector {
-	return &GranTurismoTelemetry_Vector{
-	}
+	return &GranTurismoTelemetry_Vector{}
 }
 
 func (this *GranTurismoTelemetry_Vector) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -470,17 +470,17 @@ func (this *GranTurismoTelemetry_Vector) Read(io *kaitai.Stream, parent *GranTur
  * Data set representing each wheel or suspension component at each corner of the vehicle
  */
 type GranTurismoTelemetry_CornerSet struct {
-	FrontLeft float32
+	FrontLeft  float32
 	FrontRight float32
-	RearLeft float32
-	RearRight float32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
-	_parent *GranTurismoTelemetry
+	RearLeft   float32
+	RearRight  float32
+	_io        *kaitai.Stream
+	_root      *GranTurismoTelemetry
+	_parent    *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_CornerSet() *GranTurismoTelemetry_CornerSet {
-	return &GranTurismoTelemetry_CornerSet{
-	}
+	return &GranTurismoTelemetry_CornerSet{}
 }
 
 func (this *GranTurismoTelemetry_CornerSet) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -518,13 +518,13 @@ type GranTurismoTelemetry_Coordinate struct {
 	CoordinateX float32
 	CoordinateY float32
 	CoordinateZ float32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
-	_parent *GranTurismoTelemetry
+	_io         *kaitai.Stream
+	_root       *GranTurismoTelemetry
+	_parent     *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_Coordinate() *GranTurismoTelemetry_Coordinate {
-	return &GranTurismoTelemetry_Coordinate{
-	}
+	return &GranTurismoTelemetry_Coordinate{}
 }
 
 func (this *GranTurismoTelemetry_Coordinate) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -554,15 +554,15 @@ func (this *GranTurismoTelemetry_Coordinate) Read(io *kaitai.Stream, parent *Gra
  * Transmission gear selection information
  */
 type GranTurismoTelemetry_TransmissionGear struct {
-	Current uint64
+	Current   uint64
 	Suggested uint64
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
-	_parent *GranTurismoTelemetry
+	_io       *kaitai.Stream
+	_root     *GranTurismoTelemetry
+	_parent   *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_TransmissionGear() *GranTurismoTelemetry_TransmissionGear {
-	return &GranTurismoTelemetry_TransmissionGear{
-	}
+	return &GranTurismoTelemetry_TransmissionGear{}
 }
 
 func (this *GranTurismoTelemetry_TransmissionGear) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -587,14 +587,14 @@ func (this *GranTurismoTelemetry_TransmissionGear) Read(io *kaitai.Stream, paren
  * Magic file header
  */
 type GranTurismoTelemetry_Header struct {
-	Magic []byte
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
+	Magic   []byte
+	_io     *kaitai.Stream
+	_root   *GranTurismoTelemetry
 	_parent *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_Header() *GranTurismoTelemetry_Header {
-	return &GranTurismoTelemetry_Header{
-	}
+	return &GranTurismoTelemetry_Header{}
 }
 
 func (this *GranTurismoTelemetry_Header) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -618,14 +618,14 @@ func (this *GranTurismoTelemetry_Header) Read(io *kaitai.Stream, parent *GranTur
  * Gear ratios for each gear in the transmission
  */
 type GranTurismoTelemetry_GearRatio struct {
-	Gear []float32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
+	Gear    []float32
+	_io     *kaitai.Stream
+	_root   *GranTurismoTelemetry
 	_parent *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_GearRatio() *GranTurismoTelemetry_GearRatio {
-	return &GranTurismoTelemetry_GearRatio{
-	}
+	return &GranTurismoTelemetry_GearRatio{}
 }
 
 func (this *GranTurismoTelemetry_GearRatio) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {
@@ -648,16 +648,16 @@ func (this *GranTurismoTelemetry_GearRatio) Read(io *kaitai.Stream, parent *Gran
  * Symmetry axes
  */
 type GranTurismoTelemetry_SymmetryAxes struct {
-	Pitch float32
-	Yaw float32
-	Roll float32
-	_io *kaitai.Stream
-	_root *GranTurismoTelemetry
+	Pitch   float32
+	Yaw     float32
+	Roll    float32
+	_io     *kaitai.Stream
+	_root   *GranTurismoTelemetry
 	_parent *GranTurismoTelemetry
 }
+
 func NewGranTurismoTelemetry_SymmetryAxes() *GranTurismoTelemetry_SymmetryAxes {
-	return &GranTurismoTelemetry_SymmetryAxes{
-	}
+	return &GranTurismoTelemetry_SymmetryAxes{}
 }
 
 func (this *GranTurismoTelemetry_SymmetryAxes) Read(io *kaitai.Stream, parent *GranTurismoTelemetry, root *GranTurismoTelemetry) (err error) {

@@ -10,6 +10,7 @@ import (
 
 func main() {
 	clientConfig := telemetry_client.GTClientOpts{
+		Source:       "file://examples/simple/replay.gtz",
 		StatsEnabled: true,
 	}
 
@@ -24,6 +25,10 @@ func main() {
 
 	sequenceID := uint32(0)
 	for {
+		if client.Finished {
+			break
+		}
+
 		if sequenceID == client.Telemetry.SequenceID() {
 			time.Sleep(8 * time.Millisecond)
 			continue
@@ -39,18 +44,12 @@ func main() {
 		hasTurbo := client.Telemetry.Flags().HasTurbo
 		boostStr := ""
 		if hasTurbo {
-			boostStr = fmt.Sprintf("Boost: %1.02f Bar", client.Telemetry.TurboBoostBar())
+			boostStr = fmt.Sprintf("Boost: %+1.02f Bar", client.Telemetry.TurboBoostBar())
 		}
 
 		fmt.Print("\033[H\033[2J")
-		fmt.Printf("Sequence ID:  %d  %s\nTime of day:  %+v\n",
+		fmt.Printf("Sequence ID:  %d\nTime of day:  %+v\n",
 			client.Telemetry.SequenceID(),
-			renderFlag(
-				client.Statistics.Heartbeat,
-				"Heartbeat",
-				"yellow",
-				"invisible",
-			),
 			client.Telemetry.TimeOfDay(),
 		)
 		fmt.Printf("Race          Lap: %d of %d  Last lap: %+v  Best lap: %+v  Start position: %d  Race entrants: %d\n",
@@ -95,7 +94,7 @@ func main() {
 			client.Telemetry.OilPressureKPA(),
 			boostStr,
 		)
-		fmt.Printf("Clutch        Position: %0.0f%%  Engagement: %0.0f%%  Output: %5.0f RPM\n",
+		fmt.Printf("Clutch        Position: %3.0f%%  Engagement: %3.0f%%  Output: %5.0f RPM\n",
 			client.Telemetry.ClutchActuationPercent(),
 			client.Telemetry.ClutchEngagementPercent(),
 			client.Telemetry.ClutchOutputRPM(),
@@ -226,7 +225,8 @@ func main() {
 			)
 		}
 
-		time.Sleep(64 * time.Millisecond)
+		timer := time.NewTimer(64 * time.Millisecond)
+		<-timer.C
 	}
 }
 

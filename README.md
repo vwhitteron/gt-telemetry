@@ -45,9 +45,9 @@ import telemetry_client "github.com/vwhitteron/gt-telemetry"
 Construct a new GT client and start reading the telemetry stream. All configuration fields are optional with the default values show in the example.
 
 ```go
-config := telemetry_client.Config{
-    IPAddr: "255.255.255.255",
-    LogLevel: "info",
+config := telemetry_client.GTClientOpts{
+    Source: "udp://255.255.255.255:33739"
+    LogLevel: "warn",
     StatsEnabled: false,
     VehicleDB: "./internal/vehicles/inventory.json",
 }
@@ -67,13 +67,43 @@ Read some data from the stream:
     )
 ```
 
+### Replay files ###
+
+Offline saves of replay files can also be used to read in telemetry data. Files can be in either plain (`*.gtr`) or compressed (`*.gtz`) format.
+
+Read telemetry from a replay file by setting the `Source` value in the `GTClientOpts` to a file URL, like so:
+
+```go
+config := telemetry_client.GTClientOpts{
+    Source: "file://examples/simple/replay.gtz"
+}
+```
+
+#### Saving a replay to a file ####
+
+Replays can be captured and saved to a file using `cmd/capture_replay/main.go`. Captures will be saved in plain or compressed formats according to the file extension as mentioned in the section above.
+
+A replay can be saved to a default file by running:
+
+```bash
+make run/capture-replay
+```
+
+Alternatively, the replay can be captured to a compressed file with a different name and location by running:
+
+```bash
+go run cmd/capture_replay/main.go -o /path/to/replay-file.gtz
+```
+
 ## Examples ##
 
-The [examples](./examples) directory contains an example for accessing most data made available by the library. The telemetry data can be viewed by running:
+The [examples](./examples) directory contains example code for accessing most data made available by the library. The telemetry data from a sample saved replay can be viewed by running:
 
 ```bash
 make run/live
 ```
+
+The example code can also read live telemetry data from a PlayStation by removing the `Source` field in the `GTClientOpts`.
 
 ## Acknowledgements ##
 Special thanks to [Nenkai](https://github.com/Nenkai) for the excellent work documenting the Gran Turismo telemetry protocol.

@@ -358,30 +358,30 @@ func (t *transformer) TurboBoostBar() float32 {
 }
 
 func (t *transformer) TyreDiameterMeters() CornerSet {
-	diameter := t.RawTelemetry.TyreRadius
-	if diameter == nil {
+	radius := t.RawTelemetry.TyreRadius
+	if radius == nil {
 		return CornerSet{}
 	}
 
 	return CornerSet{
-		FrontLeft:  diameter.FrontLeft * 2,
-		FrontRight: diameter.FrontRight * 2,
-		RearLeft:   diameter.RearLeft * 2,
-		RearRight:  diameter.RearRight * 2,
+		FrontLeft:  radius.FrontLeft * 2,
+		FrontRight: radius.FrontRight * 2,
+		RearLeft:   radius.RearLeft * 2,
+		RearRight:  radius.RearRight * 2,
 	}
 }
 
 func (t *transformer) TyreRadiusMeters() CornerSet {
-	diameter := t.RawTelemetry.TyreRadius
-	if diameter == nil {
+	radius := t.RawTelemetry.TyreRadius
+	if radius == nil {
 		return CornerSet{}
 	}
 
 	return CornerSet{
-		FrontLeft:  diameter.FrontLeft,
-		FrontRight: diameter.FrontRight,
-		RearLeft:   diameter.RearLeft,
-		RearRight:  diameter.RearRight,
+		FrontLeft:  radius.FrontLeft,
+		FrontRight: radius.FrontRight,
+		RearLeft:   radius.RearLeft,
+		RearRight:  radius.RearRight,
 	}
 }
 

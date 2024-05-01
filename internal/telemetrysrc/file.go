@@ -14,7 +14,7 @@ import (
 
 var packetHeader = []byte{0x30, 0x53, 0x37, 0x47}
 
-const packetInterval = (1000 * (1000 / 60)) * time.Microsecond
+const packetInterval = (1000 / 60) * time.Millisecond
 
 type FileReader struct {
 	fileContent *bufio.Scanner

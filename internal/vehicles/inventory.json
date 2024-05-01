@@ -10,6 +10,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "30": {
+    "Model": "Chevelle SS 454 '70",
+    "Manufacturer": "Chevrolet",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1970,
+    "CarID": 30,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "31": {
     "Model": "Camaro Z28 '69",
     "Manufacturer": "Chevrolet",
@@ -1088,6 +1099,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1553": {
+    "Model": "XJ13 '66",
+    "Manufacturer": "Jaguar",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1966,
+    "CarID": 1553,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
   "1562": {
     "Model": "LFA '10",
     "Manufacturer": "Lexus",
@@ -1107,6 +1129,17 @@
     "Aspiration": "TC",
     "Year": 2011,
     "CarID": 1563,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "1565": {
+    "Model": "Mark IV Race Car '67",
+    "Manufacturer": "Ford",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 1967,
+    "CarID": 1565,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -1976,6 +2009,17 @@
     "Aspiration": "TC",
     "Year": 2013,
     "CarID": 2170,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2171": {
+    "Model": "Huracán LP 610-4 '15",
+    "Manufacturer": "Lamborghini",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2171,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -3396,6 +3440,17 @@
     "Year": 2020,
     "CarID": 3414,
     "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3417": {
+    "Model": "Jaguar VGT SV",
+    "Manufacturer": "Jaguar",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "EV",
+    "Year": 2021,
+    "CarID": 3417,
+    "OpenCockpit": false,
     "CarType": "street"
   },
   "3418": {
@@ -4311,6 +4366,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3542": {
+    "Model": "ŠKODA VGT",
+    "Manufacturer": "Škoda",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "EV",
+    "Year": 2024,
+    "CarID": 3542,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
   "3543": {
     "Model": "Genesis X Gran Berlinetta VGT Concept",
     "Manufacturer": "Genesis",
@@ -4330,6 +4396,17 @@
     "Aspiration": "TC",
     "Year": 2018,
     "CarID": 3545,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3546": {
+    "Model": "AFEELA Prototype 2024",
+    "Manufacturer": "AFEELA",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "EV",
+    "Year": 2024,
+    "CarID": 3546,
     "OpenCockpit": false,
     "CarType": "street"
   },

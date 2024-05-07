@@ -121,7 +121,7 @@ run: build
 run/live:
 	@go run ${MAIN_PACKAGE_PATH}/main.go
 
-## run/capture_replay: capture a replay and save to gt7-replay.gtz
+## run/capture-replay: capture a replay and save to gt7-replay.gtz
 .PHONY: run/capture-replay
 run/capture-replay:
 	@go run cmd/capture_replay/main.go

@@ -132,5 +132,10 @@ func main() {
 		}
 	}
 
+	if b, ok := buffer.(*gzip.Writer); ok {
+		b.Flush()
+		b.Close()
+	}
+
 	fmt.Printf("Capture complete, total frames: %d\n", framesCaptured)
 }

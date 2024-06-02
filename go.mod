@@ -4,7 +4,7 @@ go 1.21.4
 
 require (
 	github.com/kaitai-io/kaitai_struct_go_runtime v0.10.0
-	github.com/rs/zerolog v1.32.0
+	github.com/rs/zerolog v1.33.0
 	golang.org/x/crypto v0.23.0
 )
 

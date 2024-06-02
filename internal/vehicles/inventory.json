@@ -32,6 +32,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "37": {
+    "Model": "Civic SiR-II (EG) '93",
+    "Manufacturer": "Honda",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 1993,
+    "CarID": 37,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "41": {
     "Model": "Corvette Stingray (C3) '69",
     "Manufacturer": "Chevrolet",
@@ -84,6 +95,17 @@
     "Aspiration": "TC",
     "Year": 1997,
     "CarID": 82,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "102": {
+    "Model": "Skyline GTS-R (R31) '87",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 1987,
+    "CarID": 102,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -141,6 +163,17 @@
     "CarID": 137,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "140": {
+    "Model": "NSX GT500 '00",
+    "Manufacturer": "Honda",
+    "Category": "Gr.3",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2000,
+    "CarID": 140,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "145": {
     "Model": "Copen '02",
@@ -857,6 +890,28 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1431": {
+    "Model": "RE Amemiya FD3S RX-7",
+    "Manufacturer": "RE Amemiya",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 1431,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1433": {
+    "Model": "Amuse S2000 GT1 Turbo",
+    "Manufacturer": "Amuse",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 0,
+    "CarID": 1433,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "1448": {
     "Model": "SILVIA spec-R Aero (S15) '02",
     "Manufacturer": "Nissan",
@@ -966,6 +1021,17 @@
     "CarID": 1508,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "1510": {
+    "Model": "NSX GT500 '08",
+    "Manufacturer": "Honda",
+    "Category": "Gr.2",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2008,
+    "CarID": 1510,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "1516": {
     "Model": "SC430 GT500 '08",
@@ -1176,6 +1242,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "1581": {
+    "Model": "GT by Citroën Road Car",
+    "Manufacturer": "Citroën",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 1581,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "1582": {
     "Model": "Miura P400 Bertone Prototype '67",
     "Manufacturer": "Lamborghini",
@@ -1218,6 +1295,17 @@
     "Year": 1971,
     "CarID": 1729,
     "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1746": {
+    "Model": "Roadster Touring Car",
+    "Manufacturer": "Mazda",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 1746,
+    "OpenCockpit": true,
     "CarType": "street"
   },
   "1770": {
@@ -1583,6 +1671,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "2051": {
+    "Model": "Genesis Coupe 3.8 '13",
+    "Manufacturer": "Hyundai",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2013,
+    "CarID": 2051,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "2059": {
     "Model": "Corvette Stingray Racer Concept '59",
     "Manufacturer": "Chevrolet",
@@ -1649,6 +1748,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "2103": {
+    "Model": "DP-100 VGT",
+    "Manufacturer": "Aston Martin",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2014,
+    "CarID": 2103,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "2106": {
     "Model": "FT-1 VGT",
     "Manufacturer": "Toyota",
@@ -1712,6 +1822,17 @@
     "Aspiration": "NA",
     "Year": 2023,
     "CarID": 2119,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2121": {
+    "Model": "Honda Sport VGT",
+    "Manufacturer": "Honda",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "TC",
+    "Year": 2017,
+    "CarID": 2121,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1834,6 +1955,17 @@
     "Year": 2014,
     "CarID": 2147,
     "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2148": {
+    "Model": "Roadster S (ND) '15",
+    "Manufacturer": "Mazda",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2015,
+    "CarID": 2148,
+    "OpenCockpit": true,
     "CarType": "street"
   },
   "2149": {
@@ -2031,6 +2163,28 @@
     "Aspiration": "TC",
     "Year": 2011,
     "CarID": 2172,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2173": {
+    "Model": "Atenza Sedan XD L Package '15",
+    "Manufacturer": "Mazda",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2015,
+    "CarID": 2173,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "2176": {
+    "Model": "RCZ GT Line '15",
+    "Manufacturer": "Peugeot",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 2015,
+    "CarID": 2176,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -2746,6 +2900,17 @@
     "Aspiration": "TC",
     "Year": 2016,
     "CarID": 3312,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3313": {
+    "Model": "919 Hybrid '16",
+    "Manufacturer": "Porsche",
+    "Category": "Gr.1",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2016,
+    "CarID": 3313,
     "OpenCockpit": false,
     "CarType": "race"
   },
@@ -3904,6 +4069,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3482": {
+    "Model": "V40 T5 R-Design '13",
+    "Manufacturer": "Volvo",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "TC",
+    "Year": 2013,
+    "CarID": 3482,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3485": {
     "Model": "Mercedes-AMG GT Black Series '20",
     "Manufacturer": "AMG",
@@ -4429,6 +4605,17 @@
     "Aspiration": "TC",
     "Year": 2018,
     "CarID": 3548,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3549": {
+    "Model": "240 SE Estate '93",
+    "Manufacturer": "Volvo",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1993,
+    "CarID": 3549,
     "OpenCockpit": false,
     "CarType": "street"
   }

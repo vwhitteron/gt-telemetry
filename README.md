@@ -21,13 +21,6 @@ GT Telemetry is a module for reading Gran Turismo race telemetry streams in Go.
   * Racing category
   * Open cockpit exposure
 
-
-## Known issues ##
-
-* The [vehicle inventory database](https://github.com/vwhitteron/gt-telemetry/internal/vehicles/inventory.json) is missing information on some vehicles. Feel free to raise a pull request to add any missing or incorrect information.
-* The differential ratio may be incorrect for vehicles that are not defined in the inventory database. By default the ratio is based on the rolling diameter of the rear wheels so will result in an incorrect ratio for front wheel drive cars with staggered wheel diameters.
-
-
 ## Installation ##
 
 To start using gt-telemetry, install Go 1.21 or above. From your project, run the following command to retrieve the module:

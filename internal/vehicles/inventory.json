@@ -907,7 +907,7 @@
     "Category": "GR.3",
     "Drivetrain": "MR",
     "Aspiration": "SC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 1425,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1052,6 +1052,17 @@
     "Aspiration": "NA",
     "Year": 2009,
     "CarID": 1504,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1506": {
+    "Model": "Gallardo LP 560-4 '08",
+    "Manufacturer": "Lamborghini",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2008,
+    "CarID": 1506,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1206,6 +1217,17 @@
     "Aspiration": "NA",
     "Year": 1970,
     "CarID": 1543,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "1544": {
+    "Model": "430 Scuderia '07",
+    "Manufacturer": "Ferrari",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 2007,
+    "CarID": 1544,
     "OpenCockpit": false,
     "CarType": "street"
   },
@@ -1831,7 +1853,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2055,
     "OpenCockpit": false,
     "CarType": "street"
@@ -1875,7 +1897,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2076,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1919,7 +1941,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2087,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1930,7 +1952,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2095,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1941,7 +1963,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2098,
     "OpenCockpit": true,
     "CarType": "race"
@@ -1952,7 +1974,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2099,
     "OpenCockpit": false,
     "CarType": "race"
@@ -1996,7 +2018,7 @@
     "Category": "",
     "Drivetrain": "LP",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2107,
     "OpenCockpit": true,
     "CarType": "race"
@@ -2018,7 +2040,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2109,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2029,7 +2051,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 2035,
     "CarID": 2110,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2040,7 +2062,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 2035,
     "CarID": 2111,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2062,7 +2084,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2113,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2084,7 +2106,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2117,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2117,7 +2139,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 2023,
     "CarID": 2120,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2139,7 +2161,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2122,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2205,7 +2227,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "EV",
-    "Year": 1111,
+    "Year": 2025,
     "CarID": 2135,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2260,7 +2282,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 2020,
     "CarID": 2142,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2447,7 +2469,7 @@
     "Category": "Gr.3",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2160,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2634,7 +2656,7 @@
     "Category": "Gr.1",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2179,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2645,7 +2667,7 @@
     "Category": "Gr.1",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 2025,
     "CarID": 2180,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2656,7 +2678,7 @@
     "Category": "Gr.1",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 2181,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2810,7 +2832,7 @@
     "Category": "Gr.1",
     "Drivetrain": "MR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 2035,
     "CarID": 3188,
     "OpenCockpit": false,
     "CarType": "race"
@@ -2832,7 +2854,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3209,
     "OpenCockpit": false,
     "CarType": "street"
@@ -2843,7 +2865,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3210,
     "OpenCockpit": false,
     "CarType": "road"
@@ -3008,7 +3030,7 @@
     "Category": "Gr.B",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3229,
     "OpenCockpit": false,
     "CarType": "race"
@@ -3041,7 +3063,7 @@
     "Category": "Gr.B",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3232,
     "OpenCockpit": false,
     "CarType": "race"
@@ -3052,7 +3074,7 @@
     "Category": "Gr.B",
     "Drivetrain": "4WD",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3234,
     "OpenCockpit": false,
     "CarType": "race"
@@ -3107,7 +3129,7 @@
     "Category": "Gr.B",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3241,
     "OpenCockpit": false,
     "CarType": "race"
@@ -3382,7 +3404,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3296,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3415,7 +3437,7 @@
     "Category": "",
     "Drivetrain": "MR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3299,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3437,7 +3459,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3301,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3448,7 +3470,7 @@
     "Category": "",
     "Drivetrain": "MR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3303,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3459,7 +3481,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3304,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3481,7 +3503,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3306,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3547,10 +3569,10 @@
     "Category": "Gr.1",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3314,
     "OpenCockpit": false,
-    "CarType": "firacexme"
+    "CarType": "race"
   },
   "3315": {
     "Model": "McLaren VGT",
@@ -3569,7 +3591,7 @@
     "Category": "",
     "Drivetrain": "FF",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3316,
     "OpenCockpit": false,
     "CarType": "race"
@@ -3580,7 +3602,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 2017,
     "CarID": 3332,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3646,7 +3668,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "SC",
-    "Year": 1111,
+    "Year": 1967,
     "CarID": 3338,
     "OpenCockpit": false,
     "CarType": "street"
@@ -3690,7 +3712,7 @@
     "Category": "",
     "Drivetrain": "MR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3342,
     "OpenCockpit": true,
     "CarType": "race"
@@ -4174,7 +4196,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "EV",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3396,
     "OpenCockpit": false,
     "CarType": "street"
@@ -4471,7 +4493,8 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 1951
+    ,
     "CarID": 3423,
     "OpenCockpit": false,
     "CarType": "street"
@@ -4493,7 +4516,7 @@
     "Category": "",
     "Drivetrain": "FR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3426,
     "OpenCockpit": false,
     "CarType": "street"
@@ -4735,7 +4758,7 @@
     "Category": "",
     "Drivetrain": "MR",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3452,
     "OpenCockpit": false,
     "CarType": "race"
@@ -4850,6 +4873,17 @@
     "OpenCockpit": false,
     "CarType": "street"
   },
+  "3468": {
+    "Model": "RGT 4.2 '16",
+    "Manufacturer": "RUF",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3468,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3469": {
     "Model": "F8 Tributo '19",
     "Manufacturer": "Ferrari",
@@ -4933,7 +4967,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "EV",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3478,
     "OpenCockpit": false,
     "CarType": "street"
@@ -4944,7 +4978,7 @@
     "Category": "",
     "Drivetrain": "4WD",
     "Aspiration": "EV",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3479,
     "OpenCockpit": true,
     "CarType": "street"
@@ -5384,7 +5418,7 @@
     "Category": "",
     "Drivetrain": "FF",
     "Aspiration": "TC",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3526,
     "OpenCockpit": false,
     "CarType": "street"
@@ -5538,7 +5572,7 @@
     "Category": "",
     "Drivetrain": "MR",
     "Aspiration": "NA",
-    "Year": 1111,
+    "Year": 0,
     "CarID": 3541,
     "OpenCockpit": false,
     "CarType": "street"
@@ -5564,6 +5598,17 @@
     "CarID": 3543,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3544": {
+    "Model": "Genesis X Gran Racer VGT Concept",
+    "Manufacturer": "Genesis",
+    "Category": "Gr.1",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC+SC",
+    "Year": 2024,
+    "CarID": 3544,
+    "OpenCockpit": false,
+    "CarType": "race"
   },
   "3545": {
     "Model": "Jimny XC '18",
@@ -5619,5 +5664,27 @@
     "CarID": 3549,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3550": {
+    "Model": "Impreza Rally Car '98",
+    "Manufacturer": "Subaru",
+    "Category": "Gr.B",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1998,
+    "CarID": 3550,
+    "OpenCockpit": false,
+    "CarType": "race"
+  },
+  "3551": {
+    "Model": "M3 '97",
+    "Manufacturer": "BMW",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1997,
+    "CarID": 3551,
+    "OpenCockpit": false,
+    "CarType": "race"
   }
 }

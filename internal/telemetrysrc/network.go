@@ -62,7 +62,10 @@ func (r *UDPReader) Read() (int, []byte, error) {
 		return 0, buffer, fmt.Errorf("no data received")
 	}
 
-	decipheredPacket := utils.Salsa20Decode(buffer[:bufLen])
+	decipheredPacket, err := utils.Salsa20Decode(buffer[:bufLen])
+	if err != nil {
+		return 0, buffer, fmt.Errorf("failed to decipher telemetry: %s", err.Error())
+	}
 
 	return bufLen, decipheredPacket, nil
 }

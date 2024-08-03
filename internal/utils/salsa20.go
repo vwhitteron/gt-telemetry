@@ -2,13 +2,19 @@ package utils
 
 import (
 	"encoding/binary"
+	"fmt"
 
 	"golang.org/x/crypto/salsa20"
 )
 
 const cipherKey string = "Simulator Interface Packet GT7 ver 0.0"
 
-func Salsa20Decode(dat []byte) []byte {
+func Salsa20Decode(dat []byte) ([]byte, error) {
+	datLen := len(dat)
+	if datLen < 32 {
+		return nil, fmt.Errorf("salsa20 data is too short: %d < 32", datLen)
+	}
+
 	key := [32]byte{}
 	copy(key[:], cipherKey)
 
@@ -21,7 +27,8 @@ func Salsa20Decode(dat []byte) []byte {
 	salsa20.XORKeyStream(ddata, dat, nonce, &key)
 	magic := binary.LittleEndian.Uint32(ddata[:4])
 	if magic != 0x47375330 {
-		return nil
+		return nil, fmt.Errorf("invalid magic value: %x", magic)
 	}
-	return ddata
+
+	return ddata, nil
 }

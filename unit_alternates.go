@@ -21,6 +21,10 @@ func (t *transformer) GroundSpeedKPH() float32 {
 	return utils.MetersPerSecondToKilometersPerHour(t.GroundSpeedMetersPerSecond())
 }
 
+func (t *transformer) OilTemperatureFahrenheit() float32 {
+	return utils.CelsiusToFahrenheit(t.RawTelemetry.OilTemperature)
+}
+
 func (t *transformer) RideHeightMillimeters() float32 {
 	return utils.MetersToMillimeters(t.RideHeightMeters())
 }

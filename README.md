@@ -98,5 +98,7 @@ make run/live
 
 The example code can also read live telemetry data from a PlayStation by removing the `Source` field in the `GTClientOpts`.
 
+[![asciicast](https://asciinema.org/a/fSBcGOR1EPjhTCMFLY0gHP0Py.svg)](https://asciinema.org/a/fSBcGOR1EPjhTCMFLY0gHP0Py)
+
 ## Acknowledgements ##
 Special thanks to [Nenkai](https://github.com/Nenkai) for the excellent work documenting the Gran Turismo telemetry protocol.

@@ -582,6 +582,17 @@
     "OpenCockpit": false,
     "CarType": "race"
   },
+  "799": {
+    "Model": "Lancer Evolution VIII MR GSR '04",
+    "Manufacturer": "Mitsubishi",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2004,
+    "CarID": 799,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "808": {
     "Model": "V6 Escudo Pikes Peak Special '98",
     "Manufacturer": "Suzuki",
@@ -5686,5 +5697,27 @@
     "CarID": 3551,
     "OpenCockpit": false,
     "CarType": "race"
+  },
+  "3553": {
+    "Model": "GT-R Premium edition T-spec '24",
+    "Manufacturer": "Nissan",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2024,
+    "CarID": 3553,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3554": {
+    "Model": "Hiace Van DX '16",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 2016,
+    "CarID": 3554,
+    "OpenCockpit": false,
+    "CarType": "street"
   }
 }

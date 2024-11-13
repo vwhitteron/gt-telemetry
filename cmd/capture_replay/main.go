@@ -100,6 +100,8 @@ func main() {
 				gt.Telemetry.VehicleManufacturer(),
 				gt.Telemetry.VehicleModel(),
 			)
+
+			// add extra data to the gzip header
 			if b, ok := buffer.(*gzip.Writer); ok {
 				b.Extra = []byte(extraData)
 			}
@@ -109,7 +111,7 @@ func main() {
 			time.Sleep(4 * time.Millisecond)
 		}
 
-		// Write the frame to the gzip buffer
+		// write the frame to the file buffer
 		if framesCaptured >= 0 {
 			if diff > 1 {
 				fmt.Printf("Dropped %d frames\n", diff-1)
@@ -132,6 +134,7 @@ func main() {
 		}
 	}
 
+	// flush and close the gzip file fuffer
 	if b, ok := buffer.(*gzip.Writer); ok {
 		b.Flush()
 		b.Close()

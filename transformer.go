@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/vwhitteron/gt-telemetry/internal/gttelemetry"
+	"github.com/vwhitteron/gt-telemetry/internal/utils"
 	"github.com/vwhitteron/gt-telemetry/internal/vehicles"
 )
 
@@ -386,8 +387,8 @@ func (t *transformer) TyreRadiusMeters() CornerSet {
 }
 
 func (t *transformer) TyreSlipRatio() CornerSet {
-	groundSpeed := t.GroundSpeedKPH()
-	wheelSpeed := t.WheelSpeedKPH()
+	groundSpeed := utils.MetersPerSecondToKilometersPerHour(t.GroundSpeedMetersPerSecond())
+	wheelSpeed := t.WheelSpeedMetersPerSecond()
 	if groundSpeed == 0 {
 		return CornerSet{
 			FrontLeft:  1,
@@ -398,10 +399,10 @@ func (t *transformer) TyreSlipRatio() CornerSet {
 	}
 
 	return CornerSet{
-		FrontLeft:  wheelSpeed.FrontLeft / groundSpeed,
-		FrontRight: wheelSpeed.FrontRight / groundSpeed,
-		RearLeft:   wheelSpeed.RearLeft / groundSpeed,
-		RearRight:  wheelSpeed.RearRight / groundSpeed,
+		FrontLeft:  utils.MetersPerSecondToKilometersPerHour(wheelSpeed.FrontLeft) / groundSpeed,
+		FrontRight: utils.MetersPerSecondToKilometersPerHour(wheelSpeed.FrontRight) / groundSpeed,
+		RearLeft:   utils.MetersPerSecondToKilometersPerHour(wheelSpeed.RearLeft) / groundSpeed,
+		RearRight:  utils.MetersPerSecondToKilometersPerHour(wheelSpeed.RearRight) / groundSpeed,
 	}
 }
 

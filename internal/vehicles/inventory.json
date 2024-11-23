@@ -5719,5 +5719,60 @@
     "CarID": 3554,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3555": {
+    "Model": "Escort RS Cosworth '92",
+    "Manufacturer": "Ford",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 1992,
+    "CarID": 3555,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3557": {
+    "Model": "W 196 R '55",
+    "Manufacturer": "Mercedez-Benz",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "NA",
+    "Year": 1955,
+    "CarID": 3557,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
+  "3558": {
+    "Model": "911 Turbo S (992) '20",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "TC",
+    "Year": 2020,
+    "CarID": 3558,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3559": {
+    "Model": "Jimny Sierra JC '18",
+    "Manufacturer": "Suzuki",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "NA",
+    "Year": 2018,
+    "CarID": 3559,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3560": {
+    "Model": "Mission X '23",
+    "Manufacturer": "Porsche",
+    "Category": "",
+    "Drivetrain": "RR",
+    "Aspiration": "EV",
+    "Year": 2023,
+    "CarID": 3560,
+    "OpenCockpit": false,
+    "CarType": "street"
   }
 }

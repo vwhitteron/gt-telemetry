@@ -5774,5 +5774,49 @@
     "CarID": 3560,
     "OpenCockpit": false,
     "CarType": "street"
+  },
+  "3561": {
+    "Model": "IONIQ 5 N '24",
+    "Manufacturer": "Hyundai",
+    "Category": "",
+    "Drivetrain": "4WD",
+    "Aspiration": "EV",
+    "Year": 2024,
+    "CarID": 3561,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3562": {
+    "Model": "F2500-A",
+    "Manufacturer": "Gran Turismo",
+    "Category": "",
+    "Drivetrain": "MR",
+    "Aspiration": "NA",
+    "Year": 0,
+    "CarID": 3562,
+    "OpenCockpit": true,
+    "CarType": "race"
+  },
+  "3563": {
+    "Model": "Civic Si Extra (EF) '87",
+    "Manufacturer": "Honda",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 1987,
+    "CarID": 3563,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3565": {
+    "Model": "C-HR S '18",
+    "Manufacturer": "Toyota",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 2018,
+    "CarID": 3565,
+    "OpenCockpit": false,
+    "CarType": "street"
   }
 }

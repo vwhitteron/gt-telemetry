@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "example cmd",
+            "name": "Launch",
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "cmd/example/main.go",
+            "program": "${workspaceFolder}/examples/simple/main.go",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

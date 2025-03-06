@@ -1,4 +1,5 @@
 run:
   allow-parallel-runners: true
-  skip-files:
+issues:
+  exclude-files:
     - "internal/gttelemetry/gran_turismo_telemetry.go"

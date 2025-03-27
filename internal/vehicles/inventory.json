@@ -4741,6 +4741,17 @@
     "OpenCockpit": true,
     "CarType": "race"
   },
+  "3447": {
+    "Model": "Vantage '18",
+    "Manufacturer": "Aston Martin",
+    "Category": "",
+    "Drivetrain": "FR",
+    "Aspiration": "TC",
+    "Year": 2018,
+    "CarID": 3447,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
   "3449": {
     "Model": "Corvette C7 ZR1 '19",
     "Manufacturer": "Chevrolet",
@@ -5849,6 +5860,28 @@
     "Aspiration": "NA",
     "Year": 2018,
     "CarID": 3565,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3566": {
+    "Model": "CX-30 X Smart Edition '21",
+    "Manufacturer": "Mazda",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 2021,
+    "CarID": 3566,
+    "OpenCockpit": false,
+    "CarType": "street"
+  },
+  "3567": {
+    "Model": "Kangoo 1.4 '01",
+    "Manufacturer": "Renault",
+    "Category": "",
+    "Drivetrain": "FF",
+    "Aspiration": "NA",
+    "Year": 2001,
+    "CarID": 3567,
     "OpenCockpit": false,
     "CarType": "street"
   }

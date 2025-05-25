@@ -1,3 +1,4 @@
+// Deprecated: This module has moved to github.com/zetetos/gt-telemetry
 module github.com/vwhitteron/gt-telemetry
 
 go 1.23.6

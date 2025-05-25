@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repository has been relocated to [zetetos/gt-telemetry](https://github.com/zetetos/gt-telemetry). Please update `go.mod` to use the new module location as this repository will no longer be maintained.
+
 # GT Telemetry #
 
 [![Build Status](https://github.com/vwhitteron/gt-telemetry/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/vwhitteron/gt-telemetry/actions?query=branch%3Amain)

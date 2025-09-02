@@ -6,7 +6,7 @@ go 1.23.6
 require (
 	github.com/kaitai-io/kaitai_struct_go_runtime v0.10.0
 	github.com/rs/zerolog v1.34.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	golang.org/x/crypto v0.38.0
 )
 
